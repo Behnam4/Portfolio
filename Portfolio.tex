@@ -15,6 +15,25 @@
 \usepackage{colortbl}
 \usepackage{xcolor,colortbl}
 
+\newcommand{\va}{\mbox{\boldmath{$a$}}}
+\newcommand{\vb}{\mbox{\boldmath{$b$}}}
+\newcommand{\vc}{\mbox{\boldmath{$c$}}}
+\newcommand{\vd}{\mbox{\boldmath{$d$}}}
+\newcommand{\vi}{\mbox{\boldmath{$i$}}}
+\newcommand{\vj}{\mbox{\boldmath{$j$}}}
+\newcommand{\vk}{\mbox{\boldmath{$k$}}}
+\newcommand{\vr}{\mbox{\boldmath{$r$}}}
+\newcommand{\vectr}[1]{\mbox{\boldmath{${#1}$}}}
+\newcommand{\unitvec}[1]{\mbox{\boldmath{$\hat{#1}$}}}
+\newcommand{\matA}{\mbox{$\underline{\underline{A}}$}}
+\newcommand{\matB}{\mbox{$\underline{\underline{B}}$}}
+\newcommand{\matAtranspose}{\mbox{$\underline{\underline{\tilde{A}}}$}}
+\newcommand{\matBtranspose}{\mbox{$\underline{\underline{\tilde{B}}}$}}
+\newcommand{\matone}{$\underline{\underline{I}}$}
+\newcommand{\grad}[1]{\mbox{\boldmath $\nabla$}\mbox{$#1$}}
+\newcommand{\divg}[1]{\mbox{\boldmath $\nabla$} \mbox{$\cdot$} \mbox{\boldmath $#1$}}
+\newcommand{\curl}[1]{\mbox{\boldmath $\nabla$} \mbox{$\times$} \mbox{\boldmath $#1$}}
+
 \definecolor{hwColor}{HTML}{AD53BA}
 \definecolor{contents}{HTML}{EAFF7C}
 \definecolor{red}{HTML}{FF0000}
@@ -90,8 +109,8 @@
       \hline
       Topic & Assignment & Page & Point Value & Points Earned \\
       \hline
-      Vector Calculus & \cellcolor{contents} Problems/Other & \cellcolor{contents} ... &\cellcolor{contents}  ... &\cellcolor{contents}  ... \\
-      & \cellcolor{contents} Exercises &\cellcolor{contents}  ... & \cellcolor{contents}  ... &\cellcolor{contents}  ... \\
+      Vector Calculus & \cellcolor{contents} Problems/Other & \cellcolor{contents} 3 &\cellcolor{contents}  ... &\cellcolor{contents}  ... \\
+      & \cellcolor{contents} Exercises &\cellcolor{contents}  6 & \cellcolor{contents}  ... &\cellcolor{contents}  ... \\
       \hline
       Line, surface and volume integrals & Problems/Other & ... & ... & ... \\
       & Exercises & ... & ... & ... \\
@@ -117,9 +136,192 @@
 
 \vfill
 
-\emph{ Important reminder: to get full credit, all calculations must be done by hand, without using electronic devices. Steps must be reasonably detailed.  The use of electronic devices is allowed, but must be explicitly declared, and will result in partial credit. See syllabus for details. Also see syllabus for rules on collaborating with others on a problem. } 
+  \emph{ Important reminder: to get full credit, all calculations must be done by hand, without using electronic devices. Steps must be reasonably detailed.  The use of electronic devices is allowed, but must be explicitly declared, and will result in partial credit. See syllabus for details. Also see syllabus for rules on collaborating with others on a problem. } 
+
+  \textbf{Problem set on Vector calculus} (40 points)
+  \begin{enumerate}
+
+    \item Bipolar cylindrical (BC) coordinates are defined by variables $u,\,v$ and $z$ given as follows in terms of Cartesian coordinates: 
+      \begin{eqnarray}
+      x &=&\frac{a\sinh v}{\cosh v-\cos u}   \\
+      y &=&\frac{a\sin u}{\cosh v-\cos u}   \\
+      z &=&z,  
+      \end{eqnarray}
+      where $a$ is a constant.
+    
+      \begin{enumerate}
+      
+        \item Find the BC basis vectors for arbitrary $a$.
+        
+        \item Find the BC metric (see in-class lectures for the definition of metric).
+        
+        \item Describe surfaces of constant $u,$ $v$ and $z$ for various values of the constant $a$ (graph optional).
+
+        \item Find the expression of the differential volume, $dV$.
+        
+        \item Express the gradient of a scalar field in BC coordinates.
+      \end{enumerate}
+    
+    
+    \item The magnetic field in a region of space (in circular cylindrical coordinates) is given by the function
+      \[
+      \vectr{B} = \left\{
+      \begin{array}{ll}
+      B_{0}\left(\displaystyle \frac{\rho}{a^{3}}\right) \left( a - \rho \right)^{2}\, \unitvec{\varphi} & \quad \quad \mbox{if $0 \le \rho \le a$}\\
+      0 & \quad \quad \mbox{if $\rho > a$}.
+      \end{array}
+      \right.
+      \]
+        \begin{enumerate}
+        \item Verify, by explicit calculation, that the divergence of $\vectr{B}$ vanishes, as it is expected from Maxwell's equations. 
+      
+        \item  Use Maxwell's relation
+        \[
+        %\frac{1}{\mu_{0}}\curl{B} = \vectr{j} + \varepsilon_{0}\prtl{\vectr{E}}{t}
+        \vectr{j} = \frac{1}{\mu_{0}}\curl{B}
+        \]
+        to find the current density \vectr{j} everywhere in space.
+      
+        \item express your result for the current density in cartesian coordinates. 
+      
+        \end{enumerate}
+    
+    
+    \item  Four particles, $P_i$ ($i=1,2,3,4$), are located at the corners of a square of sides initially $s$ in length, each particle moving directly toward its
+      clockwise-nearest neighbor with constant speed, $v.$  The initial configuration of the particles is a square centered at the origin, with its sides parallel to the axes. 
+      Let $\gamma_i(t)$ be the curve described by the position of the particle $i$ as a function of time, from the initial time, $t=0$, until when the particles collide. 
+        \begin{enumerate}
+        \item Find an equation for $\gamma_i(t)$ in polar coordinates. [Hint: begin by discussing how all the particles describe the same path, except for an overall shift in angle. So, it is only necessary to describe the curve for one of the particles]. 
+    
+        \item How much time elapses until the particles collide?  
+    
+        \item calculate the total kinetic energy of the particles, and verify that it is a conserved quantity (a constant).  
+        \end{enumerate}
+    
+  \end{enumerate}
+  % End of Problem set on Vector calculus (40 points)
+
+  \pagebreak
+
+  \textbf{Exercises set on Vector calculus} (5 points)
 
   \begin{enumerate}
-    \item Behnam was here.
+    \item Compute the gradients of the following scalar fields: \\
+      \[
+      \begin{array}{lll}
+      & {\rm (a)\hspace{0.2in}} f=x\cos \left( y\sin \left( z\right) \right)  \\
+      
+      & {\rm (b)\hspace{0.2in} }\varphi =\frac{\textstyle z}{\textstyle\tan \left( x^{2}+y^{2}\right) } \\
+      
+      & {\rm
+      (c)\hspace{0.2in}}\xi =\frac{\textstyle z}{\textstyle \left( x-a\right) ^{2}-\left( y-b\right) ^{2}+\left(z-c\right) ^{2}}
+      \end{array}
+      \]
+
+      \textcolor{hwColor}{
+        (a): \\ 
+        $
+          \overrightarrow{\nabla} f=\dfrac{\partial f}{\partial x} \hat{i}+\dfrac{\partial f}{\partial y} \hat{j}+\dfrac{\partial f}{\partial z}\hat{k} \\ 
+          =cos(y ~ sin(z)) ~ \hat{i}- x sin(ysin(z))sin(z) ~ \hat{j}- xy sin(y sin(z))cos(z)~ \hat{k}
+        $
+      }
+
+      \textcolor{hwColor}{
+        (b): \\
+        $
+          \overrightarrow{\nabla} \varphi=\dfrac{\partial \varphi}{\partial x} \hat{i}+\dfrac{\partial \varphi}{\partial y} \hat{j}+\dfrac{\partial \varphi}{\partial z}\hat{k} \\ 
+          =-\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} \hat{i}
+          -\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} \hat{j}
+          +\dfrac{1}{tan(x^2+y^2)}\hat{k}
+        $
+      }
+
+      \textcolor{hwColor}{
+        (c): \\ 
+        $
+          \overrightarrow{\nabla} \varphi=\dfrac{\partial \xi}{\partial x} \hat{i}+\dfrac{\partial \xi}{\partial y} \hat{j}+\dfrac{\partial \xi}{\partial z}\hat{k} \\ 
+          =-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\ \\   
+          +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\ \\
+          +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k}
+        $
+      }
+   
+    \item \label{ex.b}Compute the divergences of the following vector fields (here $\mathbf{\hat{i}},\mathbf{\hat{j}},\mathbf{\hat{k}}$ are the cartesian orthonormal basis vectors, see textbook): 
+    \[
+    \begin{array}{lll}
+     & {\rm (a)\hspace{0.2in}}\mathbf{V}=x^{2}\mathbf{\hat{i}}+y^{2}\mathbf{\hat{j}}+z^{2}\mathbf{\hat{k}} \\ 
+     & {\rm (b)\hspace{0.2in}}\mathbf{V}=\left(x-y\right) ^{2}\mathbf{\hat{i}}+\left( y-z\right) ^{2}\mathbf{\hat{j}}+\left( z-x\right) ^{2}\mathbf{\hat{k}} \\ 
+    
+     & {\rm (c)\hspace{0.2in}}\mathbf{V}=\frac{\textstyle \mathbf{\hat{i}}}{\textstyle x}+\frac{\textstyle \mathbf{\hat{j}}}{\textstyle y}+\frac{\textstyle \mathbf{\hat{k}}}{\textstyle z}
+    \end{array}
+    \]
+    
+    \item Compute the curls of the vector fields in set 2. above.
+    
+    \item Compute the curls of the gradients you obtained in set 1. above.
+    
+    \item Compute the Laplacian of the scalar fields in set 1. above [Note: $\nabla ^{2}\phi =\mathbf{\nabla \cdot \nabla }\phi $].
+    
+    \item Compute explicitly (by hand and in detail) the divergences of the curls you calculated in set 3. above.   
+    
+    \item Compute the Laplacians of the divergences you calculated in set 2. above.
+    
+    
+    \item The following exercises are worth 5 points each. You will use the following vectors: 
+      \begin{eqnarray*}
+      \mathbf{r} &=&x\mathbf{\hat{i}}+y\mathbf{\hat{j}}+z\mathbf{\hat{k},} \\
+      \mathbf{V} &=&yz\mathbf{\hat{i}}+xz\mathbf{\hat{j}}+xy\mathbf{\hat{k},} \\
+      \mathbf{U} &=&\frac{x^{2}+y^{2}+z^{2}}{\left( x^{2}+y^{2}\right) ^{3/2}}
+      \mathbf{\hat{k}-}\frac{z}{\left( x^{2}+y^{2}\right) ^{3/2}}\mathbf{r.}
+      \end{eqnarray*}
+    ({\bf Note:} Think a bit about how to simplify the computation of
+    $\mathbf{\grad \times U}$ before starting, to avoid messy calculations)
+    \begin{enumerate}
+    \item Compute $\left( \mathbf{V\cdot \grad{}}\right) \mathbf{r}$.
+    
+    \item Show that $\mathbf{\grad \times V}$ is zero, first by direct computation, and then by finding scalar functions whose gradients equal $\mathbf{V}$.
+    
+    \item Show that $\mathbf{\grad \times U}$ is zero, first by direct computation, and then by finding scalar functions whose gradients equal $\mathbf{U}$. 
+    
+    \item Compute $\left( \mathbf{U \! \cdot \grad{} }\right) \mathbf{V}$ and $\left( \mathbf{V \! \cdot \grad{} }\right) \mathbf{U}$, and from a
+    convenient identity, compute $\grad{}\left( \mathbf{U\cdot
+    \! V}\right) $.
+    
+    \item Write $\mathbf{V}$ and $\mathbf{U}$ in circular cylindrical
+    coordinates.
+    \end{enumerate}
+    
+    \item Prove that $\mathbf{\grad \times }\left( \psi \mathbf{\grad{} }\psi \right) =0$, where $\psi $ is a scalar function.
+    
+    \item If $\mathbf{A}$ is a constant vector, prove that $\mathbf{\grad \times (A \times r)} =2 \mathbf{A}$, where $\mathbf{r}$ is the position vector given above.
+    
+    
+    \item Compute the lengths of the following curves (5 points each; here $\ln \alpha$ indicates the natural logarithm of $\alpha$): 
+    
+      \begin{enumerate}
+      \item 
+      $\gamma(t)=(\sin t-t\cos t,t\sin t+\cos t)$,  with $t\in [0,\pi/2]$  
+      \item $\gamma(t) =  (\cos^2 t,\cos t \sin t )$,    with 
+      $t \in  [0, \pi/2]$    
+      \item  $\gamma(t)=(t^3,t^2)$, with $ t\in[0,1] $    
+      \item  $\gamma(t)= (t,\ln (1-t^2))$ , with $ t\in [a,b]$, and $-1<a<b<1 $ 
+      \item  $\gamma(t)=(t,t^{\frac{3}{2}})$ , with $t\in [0,\frac{1}{4}]$ 
+      
+      \end{enumerate}
+    
+    \item Compute the area of the following surface: 
+      \begin{equation}
+      \Sigma_1 : \begin{cases}
+                    z=\frac{1}{2}\left( x^2+2y^2 \right)  \\
+                    x^2+4y^2<8
+                  \end{cases}
+                  \nonumber
+      \end{equation}
+    (Hint: when performing the required integration, perform a change of variable, where the new variables will be a length and an angle. Take inspiration from polar coordinates.)
+    
   \end{enumerate}
+    
+
+  % End of Exercises set on Vector calculus (5 points)
+
 \end{document}
