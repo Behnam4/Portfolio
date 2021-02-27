@@ -245,7 +245,7 @@
       \textcolor{hwColor}{
         (c): \\ 
         $
-          \overrightarrow{\nabla} \varphi=\dfrac{\partial \xi}{\partial x} \hat{i}+\dfrac{\partial \xi}{\partial y} \hat{j}+\dfrac{\partial \xi}{\partial z}\hat{k} \\ 
+          \overrightarrow{\nabla} \xi=\dfrac{\partial \xi}{\partial x} \hat{i}+\dfrac{\partial \xi}{\partial y} \hat{j}+\dfrac{\partial \xi}{\partial z}\hat{k} \\ 
           =-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\ \\   
           +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\ \\
           +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k}
@@ -372,11 +372,78 @@
           \\
           =(0-0)\mathbf{\hat{i}}-(0-0)\mathbf{\hat{j}}+(0-0)\mathbf{\hat{k}} \\
           \\
-          \therefore ~ Curl ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})=0
+          \therefore ~ Curl ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})=0 \\
         $
       }
 
     \item Compute the curls of the gradients you obtained in set 1. above.
+    
+    % \\\\\\\\\\\\\\\\\\\\\\\\\\\
+      \textcolor{hwColor}{
+        (a): \\ 
+        $
+          \overrightarrow{\nabla} f=cos(y ~ sin(z)) ~ \hat{i}- x sin(ysin(z))sin(z) ~ \hat{j}- xy sin(y sin(z))cos(z) ~ \hat{k} \\
+          \\
+          Curl ~ (\overrightarrow{\nabla} f)
+          =\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            cos(y sin(z))  & -x sin(ysin(z))sin(z) & -xy sin(y sin(z))cos(z)
+          \end{vmatrix} \\
+          \\
+          =\mathbf{\hat{i}} \left[\dfrac{\partial}{\partial y}(-xy sin(y sin(z))cos(z))-\dfrac{\partial}{\partial z}(-x sin(ysin(z))sin(z))\right] \\
+          -\mathbf{\hat{j}} \left[\dfrac{\partial}{\partial x}(-xy sin(y sin(z))cos(z))-\dfrac{\partial}{\partial z}(cos(y sin(z))) \right] \\
+          +\mathbf{\hat{k}} \left[\dfrac{\partial}{\partial x}(-x sin(ysin(z))sin(z))-\dfrac{\partial}{\partial y}(cos(y sin(z)))\right]
+          \\
+          \\
+          =\mathbf{\hat{i}} (-x cos(z)\left[sin(ysin(z))+ysin(z)cos(ysin(z))\right] \\ 
+          +x\left[sin(y sin(z)) cos(z)+ysin(z)cos(z)cos(y sin(z))\right] ) \\
+          -\mathbf{\hat{j}} (-y sin(y sin(z))cos(z)+y cos(z) sin(y sin(z))) \\
+          +\mathbf{\hat{k}} (-sin(ysin(z))sin(z)+sin(z) sin(y sin(z))) \\
+          \\
+          =0 \mathbf{\hat{i}}-0 \mathbf{\hat{j}}+0 \mathbf{\hat{k}} \\
+          \\
+          \therefore ~ Curl ~ (\overrightarrow{\nabla} f)=0
+        $
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+        (b): \\
+        $
+          \overrightarrow{\nabla} \varphi=-\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} \hat{i}
+          -\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} \hat{j}
+          +\dfrac{1}{tan(x^2+y^2)} \hat{k} \\
+          \\
+          Curl ~ (\overrightarrow{\nabla} \varphi)=
+          \begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            -\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} & -\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} & \dfrac{1}{tan(x^2+y^2)}
+          \end{vmatrix}
+        $
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+        (c): \\ 
+        $
+          \overrightarrow{\nabla} \xi=-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\ \\  
+          +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\ \\
+          +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k} \\
+          \\
+          Curl ~ (\overrightarrow{\nabla} \xi)= \\
+          \begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            -\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} & \dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} & \dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} 
+          \end{vmatrix}
+        $
+      }
+
+    % \\\\\\\\\\\\\\\\\\\\\\\\\\\
     
     \item Compute the Laplacian of the scalar fields in set 1. above [Note: $\nabla ^{2}\phi =\mathbf{\nabla \cdot \nabla }\phi $].
     
