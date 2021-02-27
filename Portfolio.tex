@@ -228,6 +228,8 @@
         $
       }
 
+      \rule{15cm}{1pt}
+
       \textcolor{hwColor}{
         (b): \\
         $
@@ -237,6 +239,8 @@
           +\dfrac{1}{tan(x^2+y^2)}\hat{k}
         $
       }
+
+      \rule{15cm}{1pt}
 
       \textcolor{hwColor}{
         (c): \\ 
@@ -275,9 +279,11 @@
         $
           Div ~ (x^2 \mathbf{\hat{i}}+y^2 \mathbf{\hat{j}}+z^2 \mathbf{\hat{k}})=\dfrac{\partial x^2}{\partial x}+\dfrac{\partial y^2}{\partial y}+\dfrac{\partial z^2}{\partial z}=2x+2y+2z \\
           \\
-          \therefore Div ~ (x^2 \mathbf{\hat{i}}+y^2 \mathbf{\hat{j}}+z^2 \mathbf{\hat{k}})=2(x+y+z) \\ \\
+          \therefore ~ Div ~ (x^2 \mathbf{\hat{i}}+y^2 \mathbf{\hat{j}}+z^2 \mathbf{\hat{k}})=2(x+y+z) \\ \\
         $
       }
+
+      \rule{15cm}{1pt}
 
       \textcolor{hwColor}{
         \textbf{(b):} \\
@@ -285,20 +291,91 @@
           Div ~ ((x-y)^2 \mathbf{\hat{i}}+(y-z)^2 \mathbf{\hat{j}}+(z-x)^2 \mathbf{\hat{k}}) \\ \\
           =\dfrac{\partial (x-y)^2}{\partial x}+\dfrac{\partial (y-z)^2}{\partial y}+\dfrac{\partial (z-x)^2}{\partial z}=2(x-y)+2(y-z)+2(z-x) \\
           \\
-          \therefore Div ~ ((x-y)^2 \mathbf{\hat{i}}+(y-z)^2 \mathbf{\hat{j}}+(z-x)^2 \mathbf{\hat{k}})=0 \\
+          \therefore ~ Div ~ ((x-y)^2 \mathbf{\hat{i}}+(y-z)^2 \mathbf{\hat{j}}+(z-x)^2 \mathbf{\hat{k}})=0 \\
         $
       }
+
+      \rule{15cm}{1pt}
 
       \textcolor{hwColor}{
         \textbf{(c):} \\
         $
           Div ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})=\dfrac{\partial}{\partial x}(\dfrac{1}{x})+\dfrac{\partial}{\partial y}(\dfrac{1}{y})+\dfrac{\partial}{\partial z}(\dfrac{1}{z}) \\ \\
-          \therefore Div ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})=-\left(\dfrac{1}{x^2}+\dfrac{1}{y^2}+\dfrac{1}{z^2}\right)
+          \therefore ~ Div ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})=-\left(\dfrac{1}{x^2}+\dfrac{1}{y^2}+\dfrac{1}{z^2}\right)
         $
       }
     
     \item Compute the curls of the vector fields in set 2. above.
     
+      \textcolor{hwColor}{
+        \textbf{Curl} is the measurement of rotation of the vector field. It is like, tendency to spin! \\
+        If the curl is positive at a point, then fluid/flow would rotate counter clockwise. \\
+        If the curl is negative at a point, then fluid/flow would rotate clockwise. \\
+        If the curl is zero at a point, then fluid/flow would not rotate. \\
+        \\
+        $
+          F(x,y,z)=P \hat{i}+Q\hat{j}+R\hat{k} \Rightarrow Curl ~ F=\overrightarrow{\nabla} \times \overrightarrow{F}=\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            P & Q & R
+          \end{vmatrix}
+        $
+      }
+    
+      \textcolor{hwColor}{
+        \textbf{(a):} \\
+        $
+          Curl ~ (x^2 \mathbf{\hat{i}}+y^2 \mathbf{\hat{j}}+z^2 \mathbf{\hat{k}})
+          =\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            x^2 & y^2 & z^2
+          \end{vmatrix}=(0-0)\mathbf{\hat{i}}-(0-0)\mathbf{\hat{j}}+(0-0)\mathbf{\hat{k}} \\
+          \\
+          \therefore ~ Curl ~ (x^2 \mathbf{\hat{i}}+y^2 \mathbf{\hat{j}}+z^2 \mathbf{\hat{k}})=0
+        $
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+        \textbf{(b):} \\
+        $
+          Curl ~ ((x-y)^2 \mathbf{\hat{i}}+(y-z)^2 \mathbf{\hat{j}}+(z-x)^2 \mathbf{\hat{k}})
+          =\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            (x-y)^2 & (y-z)^2 & (z-x)^2
+          \end{vmatrix} \\
+          \\
+          =\left(\dfrac{\partial}{\partial y}(z-x)^2-\dfrac{\partial}{\partial z}(y-z)^2 \right)\mathbf{\hat{i}} \\ 
+          -\left(\dfrac{\partial}{\partial x}(z-x)^2-\dfrac{\partial}{\partial z}(x-y)^2\right)\mathbf{\hat{j}} \\
+          +\left(\dfrac{\partial}{\partial x}(y-z)^2-\dfrac{\partial}{\partial y}(x-y)^2\right)\mathbf{\hat{k}} \\
+          \\
+          =2(y-z) \mathbf{\hat{i}}+2(z-x) \mathbf{\hat{j}}+2(x-y) \mathbf{\hat{k}} \\
+          \\
+          \therefore ~ Curl ~ \left[(x-y)^2 \mathbf{\hat{i}}+(y-z)^2 \mathbf{\hat{j}}+(z-x)^2 \mathbf{\hat{k}}\right]=2 \left[(y-z) \mathbf{\hat{i}}+(z-x) \mathbf{\hat{j}}+(x-y) \mathbf{\hat{k}}\right]
+        $
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+        \textbf{(c):} \\
+        $
+          Curl ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})
+          =\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            \dfrac{1}{x} & \dfrac{1}{y} & \dfrac{1}{z}
+          \end{vmatrix} \\
+          \\
+          =(0-0)\mathbf{\hat{i}}-(0-0)\mathbf{\hat{j}}+(0-0)\mathbf{\hat{k}} \\
+          \\
+          \therefore ~ Curl ~ (\dfrac{1}{x} \mathbf{\hat{i}}+\dfrac{1}{y} \mathbf{\hat{j}}+\dfrac{1}{z} \mathbf{\hat{k}})=0
+        $
+      }
+
     \item Compute the curls of the gradients you obtained in set 1. above.
     
     \item Compute the Laplacian of the scalar fields in set 1. above [Note: $\nabla ^{2}\phi =\mathbf{\nabla \cdot \nabla }\phi $].
