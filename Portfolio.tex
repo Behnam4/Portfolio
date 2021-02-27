@@ -138,7 +138,7 @@
 
   \emph{ Important reminder: to get full credit, all calculations must be done by hand, without using electronic devices. Steps must be reasonably detailed.  The use of electronic devices is allowed, but must be explicitly declared, and will result in partial credit. See syllabus for details. Also see syllabus for rules on collaborating with others on a problem. } 
 
-  \textbf{Problem set on Vector calculus} (40 points)
+  \textbf{Problem sets on Vector calculus} (40 points)
   \begin{enumerate}
 
     \item Bipolar cylindrical (BC) coordinates are defined by variables $u,\,v$ and $z$ given as follows in terms of Cartesian coordinates: 
@@ -203,8 +203,7 @@
 
   \pagebreak
 
-  \textbf{Exercises set on Vector calculus} (5 points)
-
+  \textbf{Exercise sets on Vector calculus} (5 points)
   \begin{enumerate}
     \item Compute the gradients of the following scalar fields: \\
       \[
@@ -246,7 +245,7 @@
         $
       }
    
-    \item \label{ex.b}Compute the divergences of the following vector fields (here $\mathbf{\hat{i}},\mathbf{\hat{j}},\mathbf{\hat{k}}$ are the cartesian orthonormal basis vectors, see textbook): 
+    \item \label{ex.b} Compute the divergences of the following vector fields (here $\mathbf{\hat{i}},\mathbf{\hat{j}},\mathbf{\hat{k}}$ are the cartesian orthonormal basis vectors, see textbook): 
     \[
     \begin{array}{lll}
      & {\rm (a)\hspace{0.2in}}\mathbf{V}=x^{2}\mathbf{\hat{i}}+y^{2}\mathbf{\hat{j}}+z^{2}\mathbf{\hat{k}} \\ 
@@ -320,8 +319,285 @@
     (Hint: when performing the required integration, perform a change of variable, where the new variables will be a length and an angle. Take inspiration from polar coordinates.)
     
   \end{enumerate}
-    
-
   % End of Exercises set on Vector calculus (5 points)
+
+  \textbf{Problem set on line, surface and volume integrals} (40 points)
+  \begin{enumerate}
+
+    \item Let ${\mathcal S}$ be the portion of the hyperboloid 
+    %to a stratum of
+    described by the following parametric equations:
+    \begin{equation} 
+      \begin{cases} 
+      x = \cosh u \cos v  \nonumber \\
+      y = \cosh u \sin v,  \nonumber \\
+      z = \sinh u  \nonumber 
+      \end{cases}
+    \end{equation} 
+    where $u \in \left[-\sinh^{-1} 1, \sinh^{-1} 2 \right]$ and $v \in \left[-\pi/2, \pi/2 \right]$. 
+    
+    Calculate the flux of the vector $\mathbf{F} = x\mathbf{i }+ y\mathbf{j }+ z\mathbf{k}$ through ${\mathcal S}$. Choose the normal vector, $\mathbf{\hat{n}}$, to be in the direction of increasing $x$.
+    
+    
+    \item Given the points $O (0, 0)$, $A (1, 0)$, $B (0, 1)$, consider the closed curve $\gamma$, given by the union of the OA segment
+    with the arc of circumference with center O and radius 1 that connects A with B and with the segment BO (a graph is highly recommended). Let $\gamma$ be oriented in the 
+    counterclockwise direction. Consider the line integral
+    $${\mathcal I} = \int_{\gamma} \left(\frac{3x}{x^2 + y^2 +1} dx-\frac{3y}{x^2 + y^2 +1} dy
+       \right)~.
+       $$
+      \begin{enumerate}
+        \item Compute  ${\mathcal I}$ directly, without using boundary theorems. 
+        
+        \item Compute  ${\mathcal I}$ using Green's lemma (also known as Green's theorem in a plane, see sec. 11.3 of the textbook). 
+      \end{enumerate}
+    
+    \item Consider the surface $\Sigma$  (which is a portion of  a paraboloid) described by the following system of equations: 
+      \begin{equation} 
+        \begin{cases} 
+        y = x^2 + z^2,  \nonumber \\
+        y\leq 1,  \nonumber \\
+        z\geq 0  \nonumber 
+        \end{cases}~.
+      \end{equation} 
+    Calculate the flux of the vector field $\mathbf{F}(x, y, z)= xz^2\mathbf{i }+ xz\mathbf{j} + x^2z\mathbf{k}$  through $\Sigma$.  Choose the normal unit vector,  $\mathbf{\hat{n}}$, so that it forms an angle larger than $\pi/2$ (and smaller than $\pi$) with the vector $\mathbf{j}$. \\
+    (Hint: Note that $\Sigma$ is an open surface.  Start by choosing an appropriate closed surface, of which $\Sigma$ is a part, and applying Gauss's theorem). 
+    
+    
+  \end{enumerate}
+  % End of Problem set on line, surface and volume integrals
+  
+  \textbf{Exercises set on line, surface and volume integrals} (5 points)
+  \begin{enumerate}
+
+    \item Compute directly (without recourse to Stokes' theorem) each of the following line integrals:
+    
+      \begin{enumerate}
+        \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}=x \mathbf{i}-\mathbf{j}+z\mathbf{k}$ and $\mathcal{C}$ is the curve given by $y=x$ and $z=x^{3}$, $1\leq x\leq 2$.
+        
+        \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}=\cos x\mathbf{i}-y\mathbf{j}+xz\mathbf{k}$ and $\mathcal{C}$ is the curve given parametrically as $x\left( t\right) =t$, $y\left(t\right) =-t^{2}$ and $z\left( t\right) =1$, $0\leq t\leq 1$.
+        
+        \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}=-3xy \mathbf{i}+2\mathbf{j}$ and $\mathcal{C}$ is the semicircle $x^{2}+z^{2}=4,\;y=1,\,z\geq 0,$oriented from $\left( 2,\,1,\,0\right) $ to $\left( -2,\,1,\,0\right) .$
+        
+        \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}= \mathbf{j}-3x\mathbf{k}$ and $\mathcal{C}$ is the curve given parametrically as $x\left( t\right) =1+t^{2}$, $y\left( t\right) =-t$ and $ z\left( t\right) =1+t$, $2\leq t\leq 5$.
+      \end{enumerate}
+    
+    
+    \item Compute directly (without recourse to Gauss' theorem) each of the following surface integrals:
+    
+      \begin{enumerate}
+        \item $\int \! \int_{\mathcal{S}}\mathbf{F\cdot \hat{n}}\,d\mathcal{S}$ where $\mathbf{F}=x\mathbf{i}+y\mathbf{j}-z\mathbf{k}$ and $\mathcal{S}$ is the part of the plane $x+2y+z=4$ lying in the first octant.  Let $\mathbf{\hat{n}}$ point away from the origin.
+        
+        \item $\int \! \int_{\mathcal{S}}\mathbf{F\cdot \hat{n}}\,d\mathcal{S}$ where $\mathbf{F}=xz\mathbf{i}-y\mathbf{k}$ and
+        $\mathcal{S}$ is the part of the sphere $x^{2}+y^{2}+z^{2}=4$ lying
+        above the plane $z=1$ ($\mathbf{\hat{n}}$ points radially outward).
+        
+        \item $\int \! \int_{\mathcal{S}}\mathbf{F\cdot \hat{n}\,}d\mathcal{S}$ where $\mathbf{F}=x\mathbf{i}+y\mathbf{j}-z\mathbf{k}$ and $\mathcal{S}$ is the cylindrical segment $x^{2}+y^{2}=2,\;0\leq z\leq 4$ ($\mathbf{\hat{n}}$ points radially outward).
+      \end{enumerate}
+    
+    
+    \item Use Stokes' theorem or Gauss' theorem to evaluate each of the following integrals in the \emph{easiest possible} way. 
+      \begin{enumerate}
+        \item
+        \[
+        \int \! \int_{\mathcal{S}}\mathbf{V\cdot \hat{n}}\,\,d\mathcal{S},
+        \]
+        where $\mathbf{V}=2xy\mathbf{i}-y^{2}\mathbf{j}+\left(
+        z+xy\right) \mathbf{k},$ and $\mathcal{S}$ is the right-circular
+        cylinder (including the endcaps) bounded by $x^{2}+y^{2}=9$, $z=0$ and
+        $z=5$.
+        
+        \item
+        \[
+        \int \! \int_{\mathcal{S}}\left( \mathbf{\nabla \times V}\right)
+        \mathbf{\cdot \hat{n}\,}\,d\mathcal{S},
+        \]
+        where $\mathbf{V}=\left( x-x^{2}z\right) \mathbf{i}+\left(
+        yz^{3}-y^{2}\right) \mathbf{j}+\left( x^{2}y-xz\right) \mathbf{k} $ and $\mathcal{S}$ is \emph{any} surface whose boundary is in the $x$-$y$ plane.
+        
+        \item
+        \[
+        \oint \mathbf{V\cdot }d\mathbf{s}
+        \]
+        around the circle $\left( x-2\right) ^{2}+\left( y-3\right) ^{2}=9,$ $z=0$, where $\mathbf{V}=\left( x^{2}+yz^{2}\right) \mathbf{i}+\left(2x-y^{3}\right) \mathbf{j}$.
+        
+        \item
+        \[
+        \int \! \int_{\mathcal{S}}\mathbf{V\cdot \hat{n}}\,\,d\mathcal{S},
+        \]
+        over the entire surface of the volume in the first octant bounded by $
+        x^{2}+y^{2}+z^{2}=16$ and the coordinate planes, where $\mathbf{V}=\left(x+x^{2}-y^{2}\right) \mathbf{i}+\left( 2xyz-2xy\right) \mathbf{j}-xz^{2}\mathbf{k}$.
+        
+        \item
+        \[
+        \int \! \int_{\mathcal{S}}\mathbf{V\cdot \hat{n}}\,\,d\mathcal{S},
+        \]
+        over the surface of a sphere of radius 2 and center at the origin, where $\mathbf{V}=2x\mathbf{i}-2y\mathbf{j}+5\mathbf{k}$.
+        
+        \item
+        \[ \oint \left( y\mathbf{i}-x\mathbf{j}+z \mathbf{k}\right) \cdot d\mathbf{s}
+        \]
+        around the circumference of the circle with radius $2$, center at the
+        origin, in the $xy$ plane.
+      \end{enumerate}
+    
+    
+    
+    %\item 
+    
+    
+    %\item 
+    
+  \end{enumerate}
+  % End of Exercises set on line, surface and volume integrals
+
+  \textbf{Problem set on Fourier Transforms and the Dirac Delta} (40 points)
+  \begin{enumerate}
+
+    \item Consider the heat diffusion equation for the temperature as a function of time and a spatial coordinate, $x$: $\frac{\partial T}{\partial t}=\alpha \frac{\partial^2 T}{\partial x^2}$, with the generic initial condition $T(0,x)=T_0(x)$. 
+      \begin{enumerate}
+        \item Obtain an  equation for the function $\tilde T(t,k)$, which is the Fourier Transform of $T$ with respect to $x$ (here $k$ is the conjugate variable of $x$, and  has the same dimension as $1/x$).
+    
+        \item Solve the equation you found, so to find an expression for $\tilde T(t,k)$. 
+    
+        \item Using a Fourier Transform technique, obtain an expression for $T(t,x)$. Make sure that your final result contains the initial condition $T_0(x)$. (Hint: the convolution theorem helps with the latter part). 
+    
+        \item Find $T(t,x)$ for  $T_0(x)=\tau \delta(x)$, where $\tau$ is a constant. 
+      \end{enumerate}
+     
+    \item This problem makes use of Parseval's theorem, which says that the Fourier Transform preserves the normalization.  In other words, if $g(k) = {\mathcal F}(f(x))$, then $$\int^{+\infty}_{-\infty} |f(x)|^2 dx = \int^{+\infty}_{-\infty} |g(k)|^2 dk$$. 
+     
+    The steps are as follows:
+      \begin{enumerate}
+        \item Prove Parseval's theorem, by first proving that $$\int^{+\infty}_{-\infty} f^\ast_1(x)f_2(x) dx = \int^{+\infty}_{-\infty} g^\ast_1(k)g_2(k)dk$$, where $g_i(k) = {\mathcal F}(f_i(x))$, and then taking $f_1=f_2$. (Hint: express $g_1$ and $g_2$ as integrals and substitute them in the equation above; you may need a property of the Dirac Delta). 
+    
+    
+        \item Consider the quantum wavefunction describing the first excited state of a 1D oscillator:
+        \[
+        \psi _{1}\left( x\right) =2aC_{1}xe^{-a^{2}x^{2}/2},
+        \]
+        where $C_{1}$ is a normalization constant and $a$ is a constant related to the oscillator's parameters (mass and spring constant).   Do a Fourier Transform to find the
+        momentum-space wave function for the first excited state, $\phi _{1}\left(k\right)$. Sketch (by hand)  $|\psi _{1}\left( x\right)|^2$ and $|\phi _{1}\left(k\right)|^2$. 
+    
+        \item Check explicitly that $\psi _{1}\left( x\right)$ and $\phi _{1}\left(k\right)$ satisfy Parseval's theorem (Note: you are not required to find $C_1$.)
+    
+      \end{enumerate}
+    
+    
+  \end{enumerate}
+  % End of Problem set on Fourier Transforms and the Dirac Delta
+
+  \textbf{Exercises set on Fourier Transforms and the Dirac Delta} (5 points)
+  \begin{enumerate}
+
+    \item evaluate the following integrals: 
+    \[
+    \begin{array}{lll}
+    1.\ \int_{-2}^{0}\left( x^{2}-1\right) \,\delta \left( x^{2}-1\right)
+    \,dx & \, & 2.\ \int_{0}^{2}\left( x^{2}+1\right) \,\delta \left(
+    x^{2}-1\right) \,dx \\ 
+    3.\ \int_{-\infty }^{\infty }\ln x\,\delta \left( e^{x}-e^{2}\right)
+    \,dx & \, & 4.\ \int_{-\infty }^{\infty }e^{x}\,\delta \left( \sinh
+    x-1\right) \,dx
+    \end{array}
+    \]
+    
+    \[
+    \hspace{3em} 5.\ \int \! \int_{\mathcal{S}}\left( x^{2}+y^{2}\right)
+    \delta \left( x-2\right) \,\delta \left( y-2\right) dx\,dy,
+    \]
+    where $\mathcal{S}$ is the entire $xy$ plane. 
+    
+    \[
+    6.\ \int \! \int_{\mathcal{S}}\exp \left( i\mathbf{k\cdot r}\right) \,\delta
+    ^{\left( 2\right) }\left( \mathbf{\hat{r}}-\mathbf{\hat{z}}\right) \,d
+    \mathcal{S},
+    \]
+    where $\mathcal{S}$ is the surface of the unit sphere centered at the
+    origin. 
+    
+    \[
+    7.\ \int \! \int \! \int_{\mathcal{V}}\exp \left( i\mathbf{k\cdot r}\right)
+    \,\delta ^{\left( 3\right) }\left( \mathbf{r}-\mathbf{\hat{z}}\right) \,d\mathcal{V},
+    \]
+    where $\mathcal{V}$ is a sphere centered at the origin {\it infinitesimally larger} than the unit sphere (Why?).
+    
+    
+  
+    \item Perform the following integrals, using the properties of the  Dirac Delta and its representations:
+    \begin{enumerate}
+    \item
+    \[
+    \lim_{N\rightarrow \infty }\lim_{M\rightarrow 0}\int_{-\infty }^{\infty }
+    \frac{\sin \left( My\right) \sin \left( Ny\right) }{y}\,dy.
+    \]
+    
+    \item  
+    \[
+    \lim_{\epsilon \rightarrow 0}\int_{0}^{2}\exp \left[ -\frac{\left(
+    x-1\right) ^{2}}{\epsilon }\right] \frac{\sin kx}{\sqrt{\epsilon }}\,dx.
+    \]
+    
+    \item  
+    \[
+    \lim_{k\rightarrow \infty }\int_{-\infty }^{\infty }\frac{k\cos x}{
+    k^{2}x^{2}+1}\,dx.
+    \]
+    
+    \item  
+    \[
+    \int_{-\infty }^{\infty }dk^{\prime }\int_{-\infty }^{\infty }dx^{\prime}\,e^{ik^{\prime }x^{\prime }}e^{ikx^{\prime }}e^{ik^{\prime }x}.
+    \]
+    
+    \item  
+    \[
+    \int_{-1}^{1}f^{\prime }\left( x\right) H\left( x\right) \,dx,
+    \]
+    where $f\left( + 1\right) =0$.
+    \end{enumerate}
+    
+    
+    
+    \item For each of the functions given: plot (by hand) the function, and find its Fourier transform (if the function is written as $f$) or inverse Fourier transform (if the function is written as $g$). \\
+    {\it Note: for some of these, the table in the Example file Fourier\_Transforms\_example\_3.pdf (Canvas, Module 12)  might be useful. }
+    
+    \begin{enumerate}
+    
+    \item  
+    \[
+    f\left( x\right) =\left\{ 
+    \begin{array}{rrr}
+    \cos ax \, , & \, & -\pi /2a<x<\pi /2a \\ 
+    0 \, , & \, & \left| x\right| >\pi /2a
+    \end{array}
+    \right. .
+    \]
+    
+    \item  
+    \[
+    f\left( t\right) =\left\{ 
+    \begin{array}{rrr}
+    2\left( a+t\right) \, ,  & \, & -a<t<0 \\ 
+    2\left( a-t\right) \, , & \, & 0<t<a \\ 
+    0 \, , & \, & \left| t\right| >a
+    \end{array}
+    \right. .
+    \]
+    
+    \item  
+    \[
+    f\left( t\right) =3e^{-4\left| t\right| }\cos \left( 2t\right).
+    \]
+    
+    \item  
+    \[
+    g\left( k\right) =\frac{10\sin \left( 3k\right) }{k+\pi }.
+    \]
+    
+    \end{enumerate}
+    
+     
+    
+  \end{enumerate}
+ % End of Exercises set on Fourier Transforms and the Dirac Delta
 
 \end{document}
