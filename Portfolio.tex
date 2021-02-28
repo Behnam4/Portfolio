@@ -176,16 +176,105 @@
       \right.
       \]
         \begin{enumerate}
-        \item Verify, by explicit calculation, that the divergence of $\vectr{B}$ vanishes, as it is expected from Maxwell's equations. 
-      
-        \item  Use Maxwell's relation
-        \[
-        %\frac{1}{\mu_{0}}\curl{B} = \vectr{j} + \varepsilon_{0}\prtl{\vectr{E}}{t}
-        \vectr{j} = \frac{1}{\mu_{0}}\curl{B}
-        \]
-        to find the current density \vectr{j} everywhere in space.
-      
-        \item express your result for the current density in cartesian coordinates. 
+          \item Verify, by explicit calculation, that the divergence of $\vectr{B}$ vanishes, as it is expected from Maxwell's equations. 
+        
+            \textcolor{hwColor}{
+              From table $10.2$ of the textbook we have: \\ 
+              $Div ~ \overrightarrow{\vectr{B}}=\overrightarrow{\nabla}.\overrightarrow{\vectr{B}}=\dfrac{1}{\rho} \dfrac{\partial}{\partial \rho}(\rho \vectr{B}_{\rho})+\dfrac{1}{\rho} \dfrac{\partial \vectr{B}_{\phi}}{\partial \phi}+\dfrac{\partial \vectr{B}_z}{\partial z}$ \\
+              \\
+               Note that, $\vectr{B}$ seems to be only in the direction of $\phi$ which means $\vectr{B}_{\rho}$ and $\vectr{B}_z$ are zero, therefore: \\
+              $
+                Div ~ \overrightarrow{\vectr{B}}=\dfrac{1}{\rho} \dfrac{\partial}{\partial \rho}(\rho ~ 0)+\dfrac{1}{\rho} \dfrac{\partial}{\partial \phi}\left[\vectr{B}_0 \dfrac{\rho}{a^3}(a-\rho)^2\right]+\dfrac{\partial ~ 0}{\partial z} \\
+                \\
+                \therefore ~ Div ~ \overrightarrow{\vectr{B}}=0 \\
+              $
+              To elaborate on this, the statement vanishing divergence of a vector field simply means $\overrightarrow{\nabla}.\overrightarrow{\vectr{B}}=0$. 
+              To put it simply, a divergence of $0$ means that there is no source of vector field in the infinitesimal 
+              volume that is considered. This is because divergence is a measure of flux entering and leaving. 
+              If there is no vector field source or drain, then what goes in must come out.
+              If we take region of space that has no charges, we will find that $\overrightarrow{\nabla}.\overrightarrow{\vectr{B}}=0$.
+              Does it mean that there is no electric field passing through the volume? No, all it says is that there are 
+              no electric field sources over the volume you are considering, no change in flux.
+            }
+
+          \item Use Maxwell's relation
+          \[
+          \vectr{j}=\frac{1}{\mu_{0}}\curl{B}
+          \]
+          to find the current density \vectr{j} everywhere in space.
+
+          \textcolor{hwColor}{
+            From table $10.2$ of the textbook we have: \\ \\
+            $
+              \overrightarrow{\nabla} \times \overrightarrow{\vectr{B}}=\dfrac{1}{\rho} \begin{vmatrix}
+                \hat{e_{\rho}} & \rho \hat{e_{\phi}} & \hat{e_z} \\
+                \dfrac{\partial}{\partial \rho} & \dfrac{\partial}{\partial \phi} & \dfrac{\partial}{\partial z} \\
+                \vectr{B}_{\rho} & \rho \vectr{B}_{\phi} & \vectr{B}_z
+              \end{vmatrix} \\
+              \\
+              =\dfrac{1}{\rho} \left[
+                (\dfrac{\partial}{\partial \phi}\vectr{B}_z-\dfrac{\partial}{\partial z}\rho \vectr{B}_{\phi})\hat{e_{\rho}}       
+                -\rho(\dfrac{\partial}{\partial \rho}\vectr{B}_z-\dfrac{\partial}{\partial z} \vectr{B}_{\rho})\hat{e_{\phi}}       
+                +(\dfrac{\partial}{\partial \rho} \rho \vectr{B}_{\phi}-\dfrac{\partial}{\partial \phi} \vectr{B}_{\rho})\hat{e_z}
+              \right] 
+              \\
+              \\
+            $
+            We know that $\vectr{B}_{\rho}$ and $\vectr{B}_z$ are zero. So let's plug them into our equation: \\
+            \\
+            $
+            \dfrac{1}{\rho} \left[
+              (\dfrac{\partial}{\partial \phi}0-\dfrac{\partial}{\partial z}\rho \vectr{B}_{\phi})\hat{e_{\rho}}       
+              -\rho(\dfrac{\partial}{\partial \rho}0-\dfrac{\partial}{\partial z} 0)\hat{e_{\phi}}       
+              +(\dfrac{\partial}{\partial \rho} \rho \vectr{B}_{\phi}-\dfrac{\partial}{\partial \phi} 0)\hat{e_z}
+            \right]
+            \\
+            \\
+            =\dfrac{1}{\rho} \left[
+              (-\dfrac{\partial}{\partial z}\rho \vectr{B}_{\phi})\hat{e_{\rho}}             
+              +(\dfrac{\partial}{\partial \rho} \rho \vectr{B}_{\phi})\hat{e_z}
+            \right]=
+              -\dfrac{\partial}{\partial z} \vectr{B}_{\phi}\hat{e_{\rho}}             
+              +\dfrac{1}{\rho} \dfrac{\partial}{\partial \rho} \rho \vectr{B}_{\phi}\hat{e_z} \\ \\
+            $
+            Based on the given equation of $\vectr{B}$, $\dfrac{\partial}{\partial z} \vectr{B}_{\phi}=0$: \\
+            \\
+            $
+              =\dfrac{1}{\rho} \dfrac{\partial}{\partial \rho} \rho \vectr{B}_{\phi}\hat{e_z}=\dfrac{1}{\rho} \dfrac{\partial}{\partial \rho} \rho \left[\vectr{B}_0 \dfrac{\rho}{a^3}(a-\rho)^2\right]\hat{e_z}=\vectr{B}_0 \dfrac{1}{\rho} \dfrac{\partial}{\partial \rho} \left[\dfrac{\rho^2}{a^3}(a-\rho)^2\right]\hat{e_z} \\
+              \\
+              =\vectr{B}_0 \dfrac{1}{\rho} \dfrac{\partial}{\partial \rho} \left[\dfrac{\rho^2}{a^3}(a^2-2a \rho+\rho^2)\right]\hat{e_z}=\vectr{B}_0 \dfrac{1}{\rho} \dfrac{\partial}{\partial \rho} \left[\dfrac{\rho^2}{a}-\dfrac{2\rho^3}{a^2}+\dfrac{\rho^4}{a^3}\right]\hat{e_z} \\ \\
+              =\vectr{B}_0 \dfrac{1}{\rho} \left[\dfrac{2 \rho}{a}-\dfrac{6 \rho^2}{a^2}+\dfrac{4 \rho^3}{a^3}\right]\hat{e_z} \\ \\
+              \therefore \overrightarrow{\nabla} \times \overrightarrow{\vectr{B}}=\vectr{B}_0 \left[\dfrac{2}{a}-\dfrac{6 \rho}{a^2}+\dfrac{4 \rho^2}{a^3}\right]\hat{e_z} \\ \\
+            $
+            Now, let's find $\vectr{j}$. \\ 
+            \\
+            $
+              \vectr{j}=\dfrac{1}{\mu_0} \overrightarrow{\nabla} \times \overrightarrow{\vectr{B}}=\dfrac{\vectr{B}_0}{\mu_0} \left[\dfrac{2}{a}-\dfrac{6 \rho}{a^2}+\dfrac{4 \rho^2}{a^3}\right]\hat{e_z} \\
+              \\
+              \therefore \vectr{j}=\dfrac{\vectr{B}_0}{\mu_0} \left[\dfrac{2}{a}-\dfrac{6 \rho}{a^2}+\dfrac{4 \rho^2}{a^3}\right]\hat{e_z}
+            $
+          }
+        
+          \item Express your result for the current density in cartesian coordinates.
+          
+            \textcolor{hwColor}{
+              To convert a point from cylindrical coordinates to Cartesian coordinates, we use these equations: \\
+              \\
+              $
+                \begin{cases}
+                  x=\rho cos(\theta), ~ & \rho^2=x^2+y^2 \\
+                  y=\rho sin(\theta) \\
+                  z=z
+                \end{cases} \\
+                \\
+                \begin{cases}
+                  \hat{e_{\rho}}=\dfrac{\partial V}{\partial \rho}= cos(\phi) \hat{i}+sin(\phi) \hat{j}  \\
+                  \hat{e_{\phi}}=\dfrac{\partial V}{\partial \phi}=-\rho sin(\phi) \hat{i}+\rho cos(\phi)  \\
+                  \hat{e_z}=\dfrac{\partial V}{\partial z}=\hat{k}
+                \end{cases} \\ \\
+                \vectr{j}=\dfrac{\vectr{B}_0}{\mu_0} \left[\dfrac{2}{a}-\dfrac{6 (x^2+y^2)}{a^2}+\dfrac{4 (x^2+y^2)^2}{a^3}\right]\hat{k}
+              $
+            }
       
         \end{enumerate}
     
