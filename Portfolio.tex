@@ -608,13 +608,35 @@
       \rule{15cm}{1pt}
 
       \textcolor{hwColor}{
-          B
+        $
+          \overrightarrow{\nabla}.(\overrightarrow{\nabla} \varphi) \\
+          =\left[\dfrac{\partial}{\partial x} \hat{i}+\dfrac{\partial}{\partial y}\hat{j}+\dfrac{\partial}{\partial z}\hat{k}\right]. \\
+          -\dfrac{2xz}{sin^2(x^2+y^2)} \hat{i}
+          -\dfrac{2yz}{sin^2(x^2+y^2)} \hat{j}
+          +\dfrac{1}{tan(x^2+y^2)} \hat{k} \\
+          \\
+          =-\dfrac{\partial}{\partial x} \dfrac{2xz}{sin^2(x^2+y^2)}
+          -\dfrac{\partial}{\partial y} \dfrac{2yz}{sin^2(x^2+y^2)}
+          +\dfrac{\partial}{\partial z} \dfrac{1}{tan(x^2+y^2)} \\
+          \\
+          =-2z (\dfrac{sin^2(x^2+y^2)-4x^2 sin(x^2+y^2) cos(x^2+y^2)}{sin^4(x^2+y^2)} \\
+          +\dfrac{sin^2(x^2+y^2)-4y sin(x^2+y^2) cos(x^2+y^2)}{sin^4(x^2+y^2)}) \\
+          \\
+          \therefore \overrightarrow{\nabla}.(\overrightarrow{\nabla} \varphi) \\
+          =\dfrac{8z(x^2+y^2) cos(x^2+y^2)}{sin^3(x^2+y^2)}-\dfrac{4z}{sin^2(x^2+y^2)}
+        $
       }
 
       \rule{15cm}{1pt}
 
       \textcolor{hwColor}{
-          C
+        $
+          \overrightarrow{\nabla}.(\overrightarrow{\nabla} \xi) \\
+          =\left[\dfrac{\partial}{\partial x} \hat{i}+\dfrac{\partial}{\partial y}\hat{j}+\dfrac{\partial}{\partial z}\hat{k}\right]. \\
+          -\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\
+          +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\
+          +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k}
+        $
       }
     
     \item Compute explicitly (by hand and in detail) the divergences of the curls you calculated in set 3. above.   
