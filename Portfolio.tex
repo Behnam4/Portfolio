@@ -421,7 +421,24 @@
             \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
             \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
             -\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} & -\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} & \dfrac{1}{tan(x^2+y^2)}
-          \end{vmatrix}
+          \end{vmatrix} \\
+          \\
+          =\mathbf{\hat{i}} (\dfrac{\partial}{\partial y}(\dfrac{1}{tan(x^2+y^2)})-\dfrac{\partial}{\partial z}(-\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)})) \\
+          \\
+          -\mathbf{\hat{j}} (\dfrac{\partial}{\partial x}(\dfrac{1}{tan(x^2+y^2)})-\dfrac{\partial}{\partial z}(-\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)})) \\
+          \\
+          +\mathbf{\hat{k}} (\dfrac{\partial}{\partial x}(-\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)})-\dfrac{\partial}{\partial y}(-\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)}) \\
+          \\
+          \\
+          =\mathbf{\hat{i}} (-\dfrac{2y}{sin^2(x^2+y^2)}+\dfrac{2y}{sin^2(x^2+y^2)}) \\
+          \\
+          -\mathbf{\hat{j}} (-\dfrac{2x}{sin^2(x^2+y^2)}+\dfrac{2x}{sin^2(x^2+y^2)}) \\
+          \\
+          +\mathbf{\hat{k}} (-2yz\left[\dfrac{4x}{sin(x^2+y^2) cos(x^2+y^2)}-\dfrac{4x}{sin^3(x^2+y^2) cos(x^2+y^2)}\right] \\ 
+          -2xz \left[\dfrac{4y}{sin(x^2+y^2) cos(x^2+y^2)}-\dfrac{4y}{sin^3(x^2+y^2) cos(x^2+y^2)}\right]) \\
+          \\
+          \\
+          \therefore ~ Curl ~ (\overrightarrow{\nabla} \varphi)=0
         $
       }
 
@@ -435,11 +452,27 @@
           +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k} \\
           \\
           Curl ~ (\overrightarrow{\nabla} \xi)= \\
-          \begin{vmatrix}
-            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
-            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
-            -\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} & \dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} & \dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} 
-          \end{vmatrix}
+          =\mathbf{\hat{i}} (\dfrac{\partial}{\partial y}\left[\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right] \\
+          -\dfrac{\partial}{\partial z}\left[\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right]) \\
+          -\mathbf{\hat{j}} (\dfrac{\partial}{\partial x}\left[\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right] \\
+          -\dfrac{\partial}{\partial z}\left[-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right]) \\
+          +\mathbf{\hat{k}} (\dfrac{\partial}{\partial x}\left[\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right] \\
+          -\dfrac{\partial}{\partial y}\left[-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right]) \\
+          \\
+          \\
+          =\mathbf{\hat{i}} (\dfrac{((x-a)^2+2yb+2cz+c^2-y^2-b^2-3z^2)(2y-2b)}{((x-a)^2-(y-b)^2+(z-c)^2)^3}\\
+          -\dfrac{((x-a)^2+2yb+2cz+c^2-y^2-b^2-3z^2)(2y-2b)}{((x-a)^2-(y-b)^2+(z-c)^2)^3}) \\
+          -\mathbf{\hat{j}} (\dfrac{(2x-2a)(y^2+b^2-c^2-x^2+2ax+3z^2-a^2-2zc-2yb)}{((x-a)^2-(y-b)^2+(z-c)^2)^3} \\
+          -\dfrac{(2x-2a)(y^2+b^2-c^2-x^2+2ax+3z^2-a^2-2zc-2yb)}{((x-a)^2-(y-b)^2+(z-c)^2)^3}) \\
+          +\mathbf{\hat{k}} (-\dfrac{8z(y-b)(x-a)}{((x-a)^2-(y-b)^2+(z-c)^2)^3} \\
+          +\dfrac{8z(y-b)(x-a)}{((x-a)^2-(y-b)^2+(z-c)^2)^3}) \\
+          \\
+          =0 \mathbf{\hat{i}} \\
+          -0 \mathbf{\hat{j}} \\
+          +0 \mathbf{\hat{k}} \\
+          \\
+          \\
+          \therefore ~ Curl ~ (\overrightarrow{\nabla} \xi)=0
         $
       }
 
