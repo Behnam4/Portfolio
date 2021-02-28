@@ -326,6 +326,10 @@
           =-\dfrac{2xz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} \hat{i}
           -\dfrac{2yz sec^2(x^2+y^2)}{tan^2(x^2+y^2)} \hat{j}
           +\dfrac{1}{tan(x^2+y^2)}\hat{k}
+          \\
+          =-\dfrac{2xz}{sin^2(x^2+y^2)} \hat{i}
+          -\dfrac{2yz}{sin^2(x^2+y^2)} \hat{j}
+          +\dfrac{1}{tan(x^2+y^2)}\hat{k} \\ \\ \\
         $
       }
 
@@ -338,7 +342,7 @@
           =-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\ \\   
           +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\ \\
           +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k}
-        $
+        $ \\ 
       }
    
     \item \label{ex.b} Compute the divergences of the following vector fields (here $\mathbf{\hat{i}},\mathbf{\hat{j}},\mathbf{\hat{k}}$ are the cartesian orthonormal basis vectors, see textbook): 
@@ -467,7 +471,6 @@
 
     \item Compute the curls of the gradients you obtained in set 1. above.
     
-    % \\\\\\\\\\\\\\\\\\\\\\\\\\\
       \textcolor{hwColor}{
         (a): \\ 
         $
@@ -560,14 +563,59 @@
           -0 \mathbf{\hat{j}} \\
           +0 \mathbf{\hat{k}} \\
           \\
-          \\
           \therefore ~ Curl ~ (\overrightarrow{\nabla} \xi)=0
         $
       }
-
-    % \\\\\\\\\\\\\\\\\\\\\\\\\\\
     
     \item Compute the Laplacian of the scalar fields in set 1. above [Note: $\nabla ^{2}\phi =\mathbf{\nabla \cdot \nabla }\phi $].
+    
+      \textcolor{hwColor}{
+        We already found the below results from set 1.\\
+        $
+          \begin{cases}
+            \overrightarrow{\nabla} f=cos(y sin(z)) \hat{i}-x sin(ysin(z))sin(z) \hat{j}-xy sin(y sin(z))cos(z)\hat{k} \\
+            \\
+            \overrightarrow{\nabla} \varphi=-\dfrac{2xz}{sin^2(x^2+y^2)} \hat{i}
+            -\dfrac{2yz}{sin^2(x^2+y^2)} \hat{j}
+            +\dfrac{1}{tan(x^2+y^2)}\hat{k}
+            \\
+            \\
+            \overrightarrow{\nabla} \xi=-\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\
+            +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\
+            +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k}
+          \end{cases} \\ \\
+        $
+        Let's find the Laplacian: \\
+        \\
+        $
+          \overrightarrow{\nabla}.(\overrightarrow{\nabla} f) \\
+          =\overrightarrow{\nabla}.\left[cos(y sin(z)) \hat{i}-x sin(ysin(z))sin(z) \hat{j}-xy sin(y sin(z))cos(z)\hat{k}\right] \\
+          \\
+          =\left[\dfrac{\partial}{\partial x} \hat{i}+\dfrac{\partial}{\partial y}\hat{j}+\dfrac{\partial}{\partial z}\hat{k}\right] \\
+          .\left[cos(y sin(z)) \hat{i}-x sin(ysin(z))sin(z) \hat{j}-xy sin(y sin(z))cos(z)\hat{k}\right] \\
+          \\
+          =\dfrac{\partial}{\partial x} cos(y sin(z))
+          -\dfrac{\partial}{\partial y} x sin(ysin(z))sin(z)
+          -\dfrac{\partial}{\partial z} xy sin(y sin(z))cos(z) \\
+          \\
+          =0-x sin(z) cos(z) cos(ysin(z)) \\
+          -xy (y cos(z) cos(y sin(z)) cos(z)-sin(y sin(z))sin(z)) \\
+          \\
+          \therefore \overrightarrow{\nabla}.(\overrightarrow{\nabla} f)=-xy^2 cos^2(z) cos(y sin(z))+xy sin(z) sin(y sin(z))-x sin^2(z) cos(y sin(z))
+        $
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+          B
+      }
+
+      \rule{15cm}{1pt}
+
+      \textcolor{hwColor}{
+          C
+      }
     
     \item Compute explicitly (by hand and in detail) the divergences of the curls you calculated in set 3. above.   
     
@@ -646,6 +694,10 @@
     
     Calculate the flux of the vector $\mathbf{F} = x\mathbf{i }+ y\mathbf{j }+ z\mathbf{k}$ through ${\mathcal S}$. Choose the normal vector, $\mathbf{\hat{n}}$, to be in the direction of increasing $x$.
     
+      \textcolor{hwColor}{
+        The rate of flow (amount/volume of flow across the surface) is called the \textbf{Flux}. \\
+        \\
+      }
     
     \item Given the points $O (0, 0)$, $A (1, 0)$, $B (0, 1)$, consider the closed curve $\gamma$, given by the union of the OA segment
     with the arc of circumference with center O and radius 1 that connects A with B and with the segment BO (a graph is highly recommended). Let $\gamma$ be oriented in the 
