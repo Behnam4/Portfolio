@@ -635,7 +635,28 @@
           =\left[\dfrac{\partial}{\partial x} \hat{i}+\dfrac{\partial}{\partial y}\hat{j}+\dfrac{\partial}{\partial z}\hat{k}\right]. \\
           -\dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{i} \\
           +\dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{j} \\
-          +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k}
+          +\dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \hat{k} \\
+          \\
+          =-\dfrac{\partial}{\partial x} \dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\
+          +\dfrac{\partial}{\partial y} \dfrac{2z(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\
+          +\dfrac{\partial}{\partial z} \dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\
+          \\
+          \\
+          =-2z\left(\dfrac{\partial}{\partial x} \dfrac{2z(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}\right) \\
+          +2z\dfrac{\partial}{\partial y} \dfrac{(y-b)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\
+          +\dfrac{\partial}{\partial z} \dfrac{(x-a)^2-(y-b)^2+(z-c)^2-2z(z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\ 
+          \\
+          \\
+          =z\dfrac{-2\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2 -8(a-x) \left((x-a)^2-(y-b)^2+(z-c)^2\right)(x-a)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^4} \\
+          +\dfrac{2z(\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2)(\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2-4(y-b)(b-y))}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^4} \\
+          +(
+            \dfrac{2(c-z)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\
+            -\dfrac{2(2z-c)}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2} \\
+            +\dfrac{8z(z-c)^2}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^3} \\
+          )
+          \\
+          \\
+          \therefore \overrightarrow{\nabla}.(\overrightarrow{\nabla} \xi)=2\dfrac{z+2c}{\left((x-a)^2-(y-b)^2+(z-c)^2\right)^2}
         $
       }
     
