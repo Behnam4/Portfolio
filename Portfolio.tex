@@ -44,9 +44,9 @@
 
 \begin{titlepage}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-\center % Center everything on the page
+\center
  
 
 \textsc{\LARGE Arizona State University}\\[1.5cm] 
@@ -110,11 +110,11 @@
       \hline
       Topic & Assignment & Page & Point Value & Points Earned \\
       \hline
-      Vector Calculus & \cellcolor{contents} Problems/Other & \cellcolor{contents} 3 &\cellcolor{contents}  ... &\cellcolor{contents}  ... \\
-      & \cellcolor{contents} Exercises &\cellcolor{contents}  6 & \cellcolor{contents}  ... &\cellcolor{contents}  ... \\
+      Vector Calculus & \cellcolor{contents} Problems/Other & \cellcolor{contents} 4 &\cellcolor{contents} 40 &\cellcolor{contents}  ... \\
+      & \cellcolor{contents} Exercises &\cellcolor{contents}  10 & \cellcolor{contents}  120 &\cellcolor{contents}  ... \\
       \hline
       Line, surface and volume integrals & Problems/Other & ... & ... & ... \\
-      & Exercises & ... & ... & ... \\
+      & Exercises & 35 & 5 & ... \\
       \hline
       Integral transforms & \cellcolor{contents} Problems/Other &\cellcolor{contents}  ... &\cellcolor{contents}  ... & \cellcolor{contents} ... \\
       & \cellcolor{contents} Exercises &\cellcolor{contents}  ... &\cellcolor{contents}  ... &\cellcolor{contents}  ... \\
@@ -128,7 +128,7 @@
       Complex functions of a complex variable & Problems/Other & ...  & ... & ... \\
       & Exercises  & ...  & ... & ... \\
       \hline
-      Total & ... & ... & ... & ... \\
+      Total & ... & ... & 165 & ... \\
       \hline
   \end{tabular}
 \end{singlespace}
@@ -910,13 +910,68 @@
     \item Compute the lengths of the following curves (5 points each; here $\ln \alpha$ indicates the natural logarithm of $\alpha$): 
     
       \begin{enumerate}
-      \item 
-      $\gamma(t)=(\sin t-t\cos t,t\sin t+\cos t)$,  with $t\in [0,\pi/2]$  
-      \item $\gamma(t) =  (\cos^2 t,\cos t \sin t )$,    with 
-      $t \in  [0, \pi/2]$    
-      \item  $\gamma(t)=(t^3,t^2)$, with $ t\in[0,1] $    
-      \item  $\gamma(t)= (t,\ln (1-t^2))$ , with $ t\in [a,b]$, and $-1<a<b<1 $ 
-      \item  $\gamma(t)=(t,t^{\frac{3}{2}})$ , with $t\in [0,\frac{1}{4}]$ 
+      \item $\gamma(t)=(\sin t-t\cos t,t\sin t+\cos t)$,  with $t\in [0,\pi/2]$ 
+      
+        \textcolor{hwColor}{
+          $
+            \dfrac{dr}{dt}=<cos(t)-(cos(t)+tsin(t)), sin(t)+t cos(t)-sin(t)> \\ 
+            =<tsin(t), tcos(t)> \\
+            L=\bigints_{0}^{\dfrac{\pi}{2}} \sqrt{\dfrac{dr}{dt}.\dfrac{dr}{dt}} dt=\bigints_{0}^{\dfrac{\pi}{2}} \sqrt{<tsin(t), tcos(t)>.<tsin(t), tcos(t)>}dt \\
+            \\
+            =\bigints_{0}^{\dfrac{\pi}{2}} t dt \\
+            \therefore ~ L=\dfrac{\pi^2}{8}
+          $
+        }
+
+      \item $\gamma(t) =  (\cos^2 t,\cos t \sin t )$,  with $t \in  [0, \pi/2]$  
+      
+        \textcolor{hwColor}{
+          $
+            L=\bigints_{0}^{\dfrac{\pi}{2}} \sqrt{\dfrac{dr}{dt}.\dfrac{dr}{dt}} dt \\
+            =\bigints_{0}^{\dfrac{\pi}{2}} \sqrt{<-2cos(t) sin(t), cos^2(t)-sin^2(t)>.<-2cos(t) sin(t), cos^2(t)-sin^2(t)>} dt \\
+            \\
+            =\bigints_{0}^{\dfrac{\pi}{2}} \sqrt{cos^2(t)+sin^2(t)} dt=\bigints_{0}^{\dfrac{\pi}{2}} dt \\
+            \therefore L=\dfrac{\pi}{2}
+          $
+        }
+      \item $\gamma(t)=(t^3,t^2)$, with $ t\in[0,1] $
+      
+        \textcolor{hwColor}{
+          $
+            L=\bigints_{0}^{1} \sqrt{\dfrac{dr}{dt}.\dfrac{dr}{dt}} dt \\
+            =\bigints_{0}^{1} \sqrt{<3t^2, 2t>.<3t^2, 2t>} dt=\bigints_{0}^{1} \sqrt{9t^4+4t^2} dt \\
+            \\
+            \therefore L=\dfrac{13\sqrt{13}-8}{27}
+          $
+        }
+
+      \item $\gamma(t)= (t,\ln (1-t^2))$ , with $ t\in [a,b]$, and $-1<a<b<1 $ 
+
+        \textcolor{hwColor}{
+          $
+            L=\bigints_{a}^{b} \sqrt{\dfrac{dr}{dt}.\dfrac{dr}{dt}} dt \\
+            =\bigints_{a}^{b} \sqrt{<1, \dfrac{-2t}{1-t^2}>.<1, \dfrac{-2t}{1-t^2}>} dt=\bigints_{a}^{b} \sqrt{1+\dfrac{4t^2}{(1-t^2)^2}} dt \\
+            =\bigints_{a}^{b} \dfrac{t^2+1}{1-t^2}dt=\bigints_{a}^{b} \dfrac{2}{1-t^2} dt-\bigints_{a}^{b} \dfrac{1-t^2}{1-t^2} dt \\ \\
+            \Longrightarrow =a-b+ln(\dfrac{(1+b)(1-a)}{(1+a)(1-b)}) \\ \\
+          $
+          Based on the given internal, let's assume that the integral interval is from $-\dfrac{1}{2}$ to $\dfrac{1}{2}$, hence we have: \\
+          $
+            =-\dfrac{1}{2}-\dfrac{1}{2}+ln(\dfrac{(1+\dfrac{1}{2})(1+\dfrac{1}{2})}{(1-\dfrac{1}{2})(1-\dfrac{1}{2})}) \\
+            \therefore ~ L \approxeq 1.2 
+          $
+        }
+      \item $\gamma(t)=(t,t^{\frac{3}{2}})$ , with $t\in [0,\frac{1}{4}]$ 
+
+        \textcolor{hwColor}{
+          $
+            L=\bigints_{0}^{1} \sqrt{\dfrac{dr}{dt}.\dfrac{dr}{dt}} dt \\
+            =\bigints_{0}^{1} \sqrt{<1, \dfrac{3}{2}\sqrt{t}>.<1, \dfrac{3}{2}\sqrt{t}>} dt=\bigints_{0}^{1} \sqrt{1+\dfrac{9}{4}t} dt \\ 
+          $
+          We can solve this integral with the help of integration by parts. ($u=1+\dfrac{9}{4}t$) \\
+          $
+            \therefore ~ L \approxeq 1.4 
+          $
+        }
       
       \end{enumerate}
     
@@ -933,6 +988,8 @@
   \end{enumerate}
   % End of Exercises set on Vector calculus (5 points)
 
+  \pagebreak
+  
   \textbf{Problem set on line, surface and volume integrals} (40 points)
   \begin{enumerate}
 
@@ -1027,6 +1084,15 @@
         z+xy\right) \mathbf{k},$ and $\mathcal{S}$ is the right-circular
         cylinder (including the endcaps) bounded by $x^{2}+y^{2}=9$, $z=0$ and
         $z=5$.
+
+          \textcolor{hwColor}{
+            Well for this one we have: \\
+            $
+              \bigints \bigints_S \mathbf{F}.\hat{n}ds=\bigints \bigints_V \bigints (\overrightarrow{\nabla}.\mathbf{F}) dV=\bigints \bigints_V \bigints dV=5\pi 3^2 \\
+              \\
+              \therefore ~ \bigints \bigints_S \mathbf{F}.\hat{n}ds=45 \pi 
+            $
+          }
         
         \item
         \[
