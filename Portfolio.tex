@@ -788,30 +788,68 @@
     \begin{enumerate}
       \item Compute $\left( \mathbf{V\cdot \grad{}}\right) \mathbf{r}$.
 
-      \textcolor{hwColor}{
-        $
-          (\mathbf{V}.\overrightarrow{\nabla})\mathbf{r} \\
-          =\left((yz \mathbf{\hat{i}}+xz \mathbf{\hat{j}}+xy \mathbf{\hat{k}}).(\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}})\right)(x \mathbf{\hat{i}}+y \mathbf{\hat{j}}+z\mathbf{\hat{k}}) \\
-          \\
-          =(yz\dfrac{\partial}{\partial x}+xz\dfrac{\partial}{\partial y}+ xy\dfrac{\partial}{\partial z})(x \mathbf{\hat{i}}+y \mathbf{\hat{j}}+z\mathbf{\hat{k}}) \\
-          \\
-          =(yz\dfrac{\partial}{\partial x}x \mathbf{\hat{i}}+yz\dfrac{\partial}{\partial x}y \mathbf{\hat{j}}+yz\dfrac{\partial}{\partial x}z\mathbf{\hat{k}}) \\ \\
-          +(xz\dfrac{\partial}{\partial y}x \mathbf{\hat{i}}+xz\dfrac{\partial}{\partial y}y \mathbf{\hat{j}}+xz\dfrac{\partial}{\partial y}z\mathbf{\hat{k}}) \\ \\
-          +(xy\dfrac{\partial}{\partial z}x \mathbf{\hat{i}}+xy\dfrac{\partial}{\partial z}y \mathbf{\hat{j}}+xy\dfrac{\partial}{\partial z}z\mathbf{\hat{k}}) \\
-          \\
-          \\
-          =(yz\dfrac{\partial}{\partial x}x \mathbf{\hat{i}}+0+0) \\ \\
-          +(0+xz\dfrac{\partial}{\partial y}y \mathbf{\hat{j}}+0) \\ \\
-          +(0+0+xy\dfrac{\partial}{\partial z}z\mathbf{\hat{k}}) \\ 
-          \\
-          \\
-          \therefore ~ (\mathbf{V}.\overrightarrow{\nabla})\mathbf{r}=yz\mathbf{\hat{i}}+xz\mathbf{\hat{j}}+xy\mathbf{\hat{k}}
-        $
-      }
+        \textcolor{hwColor}{
+          $
+            (\mathbf{V}.\overrightarrow{\nabla})\mathbf{r} \\
+            =\left((yz \mathbf{\hat{i}}+xz \mathbf{\hat{j}}+xy \mathbf{\hat{k}}).(\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}})\right)(x \mathbf{\hat{i}}+y \mathbf{\hat{j}}+z\mathbf{\hat{k}}) \\
+            \\
+            =(yz\dfrac{\partial}{\partial x}+xz\dfrac{\partial}{\partial y}+ xy\dfrac{\partial}{\partial z})(x \mathbf{\hat{i}}+y \mathbf{\hat{j}}+z\mathbf{\hat{k}}) \\
+            \\
+            =(yz\dfrac{\partial}{\partial x}x \mathbf{\hat{i}}+yz\dfrac{\partial}{\partial x}y \mathbf{\hat{j}}+yz\dfrac{\partial}{\partial x}z\mathbf{\hat{k}}) \\ \\
+            +(xz\dfrac{\partial}{\partial y}x \mathbf{\hat{i}}+xz\dfrac{\partial}{\partial y}y \mathbf{\hat{j}}+xz\dfrac{\partial}{\partial y}z\mathbf{\hat{k}}) \\ \\
+            +(xy\dfrac{\partial}{\partial z}x \mathbf{\hat{i}}+xy\dfrac{\partial}{\partial z}y \mathbf{\hat{j}}+xy\dfrac{\partial}{\partial z}z\mathbf{\hat{k}}) \\
+            \\
+            \\
+            =(yz\dfrac{\partial}{\partial x}x \mathbf{\hat{i}}+0+0) \\ \\
+            +(0+xz\dfrac{\partial}{\partial y}y \mathbf{\hat{j}}+0) \\ \\
+            +(0+0+xy\dfrac{\partial}{\partial z}z\mathbf{\hat{k}}) \\ 
+            \\
+            \\
+            \therefore ~ (\mathbf{V}.\overrightarrow{\nabla})\mathbf{r}=yz\mathbf{\hat{i}}+xz\mathbf{\hat{j}}+xy\mathbf{\hat{k}}
+          $
+        }
       
       \item Show that $\mathbf{\grad \times V}$ is zero, first by direct computation, and then by finding scalar functions whose gradients equal $\mathbf{V}$.
       
-      \item Show that $\mathbf{\grad \times U}$ is zero, first by direct computation, and then by finding scalar functions whose gradients equal $\mathbf{U}$. 
+        \textcolor{hwColor}{
+          $
+            \overrightarrow{\nabla} \times \mathbf{V}=(\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}}) \times (yz\mathbf{\hat{i}}+xz \mathbf{\hat{j}}+xy\mathbf{\hat{k}}) \\
+            \\
+            =\begin{vmatrix}
+              \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+              \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+              yz & xz & xy
+            \end{vmatrix} \\
+            =\left(\dfrac{\partial}{\partial y}xy-\dfrac{\partial}{\partial z}xz\right)\mathbf{\hat{i}}-\left(\dfrac{\partial}{\partial x}xy-\dfrac{\partial}{\partial z}yz\right)\mathbf{\hat{j}}+\left(\dfrac{\partial}{\partial x}xz-\dfrac{\partial}{\partial y}yz\right)\mathbf{\hat{k}} \\
+            \\
+            \\
+            =(x-x)\mathbf{\hat{i}}-(y-y)\mathbf{\hat{j}}+(z-z)\mathbf{\hat{k}} \\
+            \\
+            \therefore ~ \overrightarrow{\nabla} \times \mathbf{V}=0
+          $
+        }
+        
+      \item Show that $\mathbf{\grad \times U}$ is zero, first by direct computation, and then by finding scalar functions whose gradients equal $\mathbf{U}$.
+      
+        \textcolor{hwColor}{
+          $
+            \overrightarrow{\nabla} \times \mathbf{U}=(\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}}) \times (-\dfrac{xz}{((x^2+y^2)^2)^{3/2}} \mathbf{\hat{i}}-\dfrac{yz}{((x^2+y^2)^2)^{3/2}} \mathbf{\hat{j}}+\dfrac{1}{\sqrt{x^2+y^2}}\mathbf{\hat{k}}) \\
+            \\
+            \\
+            =\begin{vmatrix}
+              \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+              \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+              -\dfrac{xz}{((x^2+y^2)^2)^{3/2}} & -\dfrac{yz}{((x^2+y^2)^2)^{3/2}} & \dfrac{1}{\sqrt{x^2+y^2}}
+            \end{vmatrix} \\
+            \\
+            =\mathbf{\hat{i}}(\dfrac{\partial}{\partial y}\dfrac{1}{\sqrt{x^2+y^2}}+\dfrac{\partial}{\partial z}\dfrac{yz}{((x^2+y^2)^2)^{3/2}}) \\
+            -\mathbf{\hat{j}}(\dfrac{\partial}{\partial x}\dfrac{1}{\sqrt{x^2+y^2}}+\dfrac{\partial}{\partial z}\dfrac{xz}{((x^2+y^2)^2)^{3/2}}) \\
+            +\mathbf{\hat{k}}(-\dfrac{\partial}{\partial x}\dfrac{yz}{((x^2+y^2)^2)^{3/2}}+\dfrac{\partial}{\partial y}\dfrac{xz}{((x^2+y^2)^2)^{3/2}}) 
+            \\
+            \\
+            \therefore ~ \overrightarrow{\nabla} \times \mathbf{U}=0
+          $
+        }
       
       \item Compute $\left( \mathbf{U \! \cdot \grad{} }\right) \mathbf{V}$ and $\left( \mathbf{V \! \cdot \grad{} }\right) \mathbf{U}$, and from a
       convenient identity, compute $\grad{}\left( \mathbf{U\cdot
