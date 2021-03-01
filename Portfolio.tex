@@ -860,9 +860,52 @@
     \end{enumerate}
     
     \item Prove that $\mathbf{\grad \times }\left( \psi \mathbf{\grad{} }\psi \right) =0$, where $\psi $ is a scalar function.
+
+      \textcolor{hwColor}{
+        $
+          \overrightarrow{\nabla} \times (\psi \overrightarrow{\nabla} \psi)= (\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}}) \times (\psi \left[\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}}\right] \psi) \\
+          \\
+          =\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            \psi \dfrac{\partial}{\partial x} \psi  & \psi \dfrac{\partial}{\partial y} \psi & \psi \dfrac{\partial}{\partial z} \psi 
+          \end{vmatrix} \\
+          \\
+          =\mathbf{\hat{i}} (\dfrac{\partial}{\partial y}\psi \dfrac{\partial}{\partial z} \psi-\dfrac{\partial}{\partial z}\psi \dfrac{\partial}{\partial y}  \psi) \\
+          -\mathbf{\hat{j}} (\dfrac{\partial}{\partial x}\psi \dfrac{\partial}{\partial z} \psi-\dfrac{\partial}{\partial z}\psi \dfrac{\partial}{\partial x}) \\
+          +\mathbf{\hat{k}} (\dfrac{\partial}{\partial x}\psi \dfrac{\partial}{\partial y} \psi-\dfrac{\partial}{\partial y}\psi \dfrac{\partial}{\partial x} \psi) \\
+          \\
+          \therefore ~ \overrightarrow{\nabla} \times (\psi \overrightarrow{\nabla} \psi)=0
+        $
+      }
     
     \item If $\mathbf{A}$ is a constant vector, prove that $\mathbf{\grad \times (A \times r)} =2 \mathbf{A}$, where $\mathbf{r}$ is the position vector given above.
     
+      \textcolor{hwColor}{
+        Let's assume $\overrightarrow{A}=<a_x, a_y, a_z>$ and $\overrightarrow{r}=<r_x, r_y, r_z>$. \\
+        $
+          \overrightarrow{\nabla} \times (\overrightarrow{A} \times \overrightarrow{r})
+          =\left[\dfrac{\partial}{\partial x}\mathbf{\hat{i}}+\dfrac{\partial}{\partial y}\mathbf{\hat{j}}+\dfrac{\partial}{\partial z}\mathbf{\hat{k}}\right] \times  \begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            a_x & a_y & a_z \\
+            r_x & r_y & r_z
+          \end{vmatrix} \\
+          \\
+          =\begin{vmatrix}
+            \mathbf{\hat{i}} & \mathbf{\hat{j}} & \mathbf{\hat{k}} \\
+            \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+            a_y r_z-a_z r_y & a_x r_z- a_z r_x & a_xr_y-a_yr_x
+          \end{vmatrix} \\
+          \\
+          =\mathbf{\hat{i}}(\dfrac{\partial}{\partial y}(a_xr_y-a_yr_x)-\dfrac{\partial}{\partial z}(a_x r_z- a_z r_x))
+          -\mathbf{\hat{j}}(\dfrac{\partial}{\partial x}(a_xr_y-a_yr_x)-\dfrac{\partial}{\partial z}(a_y r_z-a_z r_y))
+          +\mathbf{\hat{k}}(\dfrac{\partial}{\partial x}(a_x r_z- a_z r_x)-\dfrac{\partial}{\partial y}(a_y r_z-a_z r_y)) \\
+          \\
+          =\mathbf{\hat{i}}(2a_x)+\mathbf{\hat{j}}(2a_y)+\mathbf{\hat{k}}(2a_z)=2\left(\mathbf{\hat{i}}(a_x)+\mathbf{\hat{j}}(a_y)+\mathbf{\hat{k}}(a_z)\right) \\
+          \\
+          \therefore ~ \overrightarrow{\nabla} \times (\overrightarrow{A} \times \overrightarrow{r})=2\overrightarrow{A}
+        $
+      }
     
     \item Compute the lengths of the following curves (5 points each; here $\ln \alpha$ indicates the natural logarithm of $\alpha$): 
     
