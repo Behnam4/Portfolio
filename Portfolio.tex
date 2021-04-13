@@ -16,6 +16,7 @@
 \usepackage{colortbl}
 \usepackage{xcolor,colortbl}
 
+
 \newcommand{\va}{\mbox{\boldmath{$a$}}}
 \newcommand{\vb}{\mbox{\boldmath{$b$}}}
 \newcommand{\vc}{\mbox{\boldmath{$c$}}}
@@ -34,6 +35,10 @@
 \newcommand{\grad}[1]{\mbox{\boldmath $\nabla$}\mbox{$#1$}}
 \newcommand{\divg}[1]{\mbox{\boldmath $\nabla$} \mbox{$\cdot$} \mbox{\boldmath $#1$}}
 \newcommand{\curl}[1]{\mbox{\boldmath $\nabla$} \mbox{$\times$} \mbox{\boldmath $#1$}}
+\newcommand{\prtl}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\newcommand{\prtll}[2]{\ensuremath{\frac{\partial^{2} #1}{\partial {#2}^{2}}}}
+\newcommand{\yd}[2]{\ensuremath{\frac{d #1}{d #2}}}
+\newcommand{\ydd}[2]{\ensuremath{\frac{d^{2} #1}{d {#2}^{2}}}}
 
 \definecolor{hwColor}{HTML}{AD53BA}
 \definecolor{contents}{HTML}{EAFF7C}
@@ -472,5 +477,295 @@
     
   \end{enumerate}
  % End of Exercises set on Fourier Transforms and the Dirac Delta
+
+
+
+
+
+
+
+
+  \textbf{Problem set on Fourier Transforms and the Dirac Delta} (40 points)
+  \begin{enumerate}
+
+    \item  Consider a square drum. Its membrane has all four sides (length $a$) tightly clamped.  Some of its vibrational modes are also dampened by a clamp placed at the center of the membrane. 
+    \begin{enumerate}
+      \item  write the differential equation that describes the displacement of the drum's membrane as a function of the point on the membrane and of time. 
+      
+      \item Using the method of the separation of the variables, find the general solution of the equation. 
+      
+      \item apply the boundary conditions and find the solution of the problem. Write the first four (lowest) distinct vibrational frequencies of the drum. 
+    \end{enumerate}
+    
+    
+    \item Consider a thick cylindrical sleeve, of height $h$, inner radius $a$ and outer radius $b$.  We want to solve the 
+      Laplace equation $\nabla^{2}V(\rho,\varphi,z)=0$ inside the sleeve walls, i.e. for  $a \le \rho \le b$.
+    
+      \begin{enumerate}
+          \item Use the method of the separation of the variables to find separate, single-variable equations.  Assume a solution that does not depend on $z$, i.e., $\partial V/\partial z =0$.  Discuss the sign(s) of the separation constant(s) as appropriate.
+          
+          \item find the general solution of the equation, assuming that the separation constant is not zero.   
+      \end{enumerate}
+    
+    \item Consider a plate in the shape of a segment of a circle (think of a slice of cake), subtended by an angle $\alpha=\pi/4$. 
+    Let $R$ be the radius of the circle.  The plate has negligible thickness and its upper and lower surfaces are thermally isolated
+    ($\partial T/\partial z=0$). The two straight segments are kept at a temperature $T=0$, while the curved part of the plate 
+    has a temperature profile $f(\theta)$ ($\theta$ varies in the interval $\left[ 0 , \pi/4 \right]$). Calculate the 
+    {\it stationary} (i.e., steady state) temperature distribution in the plate for $f(\theta)$ generic. 
+    To do that, you will go through the following steps: 
+      \begin{enumerate}
+          \item  Write the relevant differential equation, and, using the separation of variables, obtain  separate single-variable equations. \\
+          
+          \item  Discuss the sign of the separation constant(s) on the basis of the boundary conditions. 
+          
+          \item Solve the single-variable equations and write the general solution of the problem.  Can the radial dependence of the solution have a power-law form, $R(\rho) \propto \rho^w $ (with $w$ a constant to be determined)?  Discuss this possibility in detail. 
+          
+          \item Apply the boundary conditions and complete the solution of the problem.
+      \end{enumerate}
+  
+  \end{enumerate}
+  % End of Problem set on Fourier Transforms and the Dirac Delta
+
+
+  \textbf{Problem set on special functions} (40 points)
+  \begin{enumerate}
+    \item Consider a pole of uniform mass density standing vertically and embedded firmly in the ground. 
+    We want to find the critical height $h_c$ of the pole, so that for height $h > h_c$  the pole bends 
+    under its own weight (``self-buckling"). The equation that describes the angular displacement $\vartheta$ (from the vertical axis) of the pole is
+    \begin{equation}
+      \ydd{\vartheta}{z} + \eta  z \vartheta = 0~,
+      %\ydd{\vartheta}{z}
+    \end{equation}
+    where $z$ increases downward from the top of the pole (see figure). Here $\eta$ is a combination of physical parameters and is proportional to the acceleration of gravity, $g$. 
+    
+    \begin{enumerate}
+      \item  By using an appropriate change of variables (see class 16), recast the equation in the form of Bessel equation. Find the solution, and express it in the form
+      \[
+      \vartheta(z) = Af(z) + Bg(z),
+      \]
+      where $A$ and $B$ are constants, and $f(z)$ and $g(z)$ are linearly-independent functions that contain Bessel functions.
+      
+      \item impose the boundary condition $\left.\yd{\vartheta}{z}\right|_{z=0} = 0$. {\it [ Hint:  You should find that, 
+      out of the two functions $f(z)$ and $g(z)$, (only) one of them has a vanishing derivative in $z=0$.  
+      Prove this by using BF eq. (29) and (30) to express $f(z)$ and $g(z)$ as series in powers of $z$ and estimate their derivatives. ]}
+      
+      \item impose the boundary condition $\vartheta(h)=0$, and find an expression for $h_{\rm c}$ in terms of $\eta$ and of the root(s) $\zeta_i$ of the relevant Bessel function. {\it [ Hint: think carefully: which root(s) do you need to find $h_c$? Keep them as symbolic quantities, don't worry about their numerical values. ]}
+      
+      \item Discuss the physical meaning of your result for $h_c$: can one afford taller skyscrapers on planets with stronger gravity?  Or vice-versa? 
+      
+    \end{enumerate}
+    
+    \item it is the year 2999, and the Moon has become a huge deposit of nuclear waste\footnote{This problem is loosely inspired by the 20th century science fiction tv series ``Space 1999", available on Youtube.}, hypermassive matter, and heavy dark matter, to the point that its gravitational field has been modified.   Due to climate constraints, and to poor planning, the waste storage has been uneven, resulting in an uneven mass distribution.    The gravitational potential on the surface of the Moon
+          can be approximated as $V(R,\theta,\phi)=V_0 + V_0 \epsilon (1+\cos \theta)\sin^2\theta \cos2\phi $, where $\theta$ and $\phi$ are the zenith and azimuthal angles. 
+          
+          Find the gravitational potential everywhere outside the Moon. Assume that the Moon is a sphere of radius $R$, and neglect the gravitational field of the Earth.  \\
+          {\it [Hint 1: remember that the gravitational potential in vacuum satisfies the Laplace equation.]}\\
+          {\it  [ Hint 2: Explicitly state any textbook equations that you might be using. Failure to do so will result in loss of credit.  ]}
+          
+    
+    \item A cold war is ongoing between the United Federation of Planets and the Romulan empire\footnote{This problem is loosely inspired by the Star Trek TNG episode ``The defector". No knowledge of it is required at all to solve this problem. Watching the episode can be fun, though! }. 
+    %The war between Earth (as a member of the United Federation of Planets) and the Romulan empire is over, but tension remains high. 
+    The Federation has intelligence that the Romulans may be ammassing illegal quantities of supermassive Dark Matter in
+    two subterranean bases located in a small planet of mass $M$ and radius $R$. As a way to detect the bases, measurements of the planet's gravitational potential, $\phi(r,\theta)$, are made at a distance $r \gg R$. 
+    
+    Due to instrumental malfunctions, three measurements give three different results: 
+    \begin{eqnarray}
+      &&\phi(r,\theta)=  \frac{A}{r} +  \frac{B}{r^3}\cos\theta  + {\mathcal O}(r^{-4})
+      \nonumber\\
+      &&\phi(r,\theta)=  \frac{A}{r} +   \frac{B}{r^3} (3 \cos^2\theta - 1) + {\mathcal O}(r^{-4}) 
+      \nonumber\\
+      &&\phi(r,\theta)=  A r+  B \ln(1/r) (3 \cos^2\theta - 1)+ {\mathcal O}(r^{-4}) \nonumber
+    \end{eqnarray}
+    where $A,B$ are constants. 
+      \begin{enumerate}
+        \item two of the measurements are incorrect, because they don't satisfy Laplace's equation.  Find them and discard them, and keep the remaining one.  Explain your reasoning.
+        
+        \item Build a theoretical model for $\phi(r,\theta)$.  Assume that the natural gravitational potential of the planet (without the Romulan bases) is spherically symmetric. 
+        Assume also that the two bases are placed along the planet's diameter, at each side of the center, and at equal distance $r=a$ from the center (figure below).  Denote $m_1$ and $m_2$ their masses. Calculate $\phi(r,\theta)$ for distances $r>R>a$. 
+        
+        % {\hspace{1.5in}\epsfig{figure=planetfigure,width=3in}}
+        \includegraphics[width=\linewidth]{planetfigure.JPG}
+        
+        \item Assuming $r \gg R>a$, write $\phi(r,\theta)$ as a series in Legendre polynomials. Keep the first three leading terms. Check if your result matches solution of Laplace's equation, {\bf LP}, eq.  (37) (see also {\bf LP} eq.   (34) and related text).  
+        
+        \item Does your result match the measurement?  For what parameters?  Comment as adequate: can you exclude the existence of the two military bases?
+        
+      \end{enumerate}
+    
+  \end{enumerate}
+  % End of Problem set on special functions
+
+
+  \textbf{Exercises set on special functions} (5 points)
+  \begin{enumerate}
+    \item using the method discussed in class 16, show that the equations below can be solved in terms of Bessel functions, and find their general solution.
+    
+    \begin{enumerate}
+    \item $y^{\prime \prime }+2n^{2}xy=0$
+    
+    \item $xy^{\prime \prime }+\left( 2n+1\right) y^{\prime }+xy=0$
+    \end{enumerate}
+    
+    
+    
+    \item Consider the generating function of Bessel functions, $G(x,h)$. Show that $G\left( x+y,\,h\right) =G\left( x,\,h\right) G\left(
+    y,\,h\right) .$
+    
+    \item Use the result in the previous exercise to show that $J_{m}\left( x+y\right) =\sum\limits_{k=-\infty}^{\infty }J_{k}\left( x\right) J_{m-k}\left( y\right) .$
+    
+    
+    \item Express each of the following in terms of Legendre polynomials, $
+    P_{n}\left( x\right) $:
+      
+      \begin{enumerate}
+        \item $x-x^{3}$
+        
+        \item $7x^{4}-3x+1$
+      \end{enumerate}
+    
+    \item Use the generating function for Legendre polynomials to obtain $P_{3}\left(x\right)$.
+    
+    \item Use the Rodrigues formula for Legendre polynomials to obtain $P_{4}\left(x\right)$.
+    
+    
+    \item Write the delta function, $\delta \left( x\right)$, as a series in Legendre polynomials over the range \newline $-1\leq x\leq 1$.
+    
+    
+    \item Write each of the following expressions as spherical harmonics (do not forget the normalization factors and powers of $r$) where $x$, $y$, and $z$ are the Cartesian coordinate variables:
+    
+      \begin{enumerate}
+      
+        \item $x^{2}-y^{2}$
+        
+        \item $z$
+        
+        \item $z^{2}$
+        
+        \item $x^{2}-2ixy+y^{2}$
+        
+        \item $xyz$
+      \end{enumerate}
+    
+  \end{enumerate}
+  % End of Exercises set on special functions
+
+
+  \textbf{Exercises set on Analytic functions} (5 points)
+  \begin{enumerate}
+
+    \item  Given the following functions, determine first if each is harmonic, and if so, find an analytic function that has it as its real part, $u(x,y)$. Express each analytic function in terms of $z$.
+    
+    \begin{enumerate}
+    
+      \item $e^{x}\cos x$
+      
+      \item $2x\left( 3+y\right)$
+      
+      \item $x^{2}+y^{2}$
+    \end{enumerate}
+    
+    
+    \item Evaluate the following integrals:
+    
+    \begin{enumerate}
+    
+    \item  (5 points total including all the different contours)
+    \[
+    \oint_{C}\frac{\sin 2z}{z^{2}-4z+5}\,dz
+    \]
+    
+    \begin{enumerate}
+      \item where $C$ is the circle $\left| z\right| =1.$
+      
+      \item where $C$ is the circle $\left| z-2i\right| =3.$
+      
+      \item where $C$ is the circle $\left| z-1+2i\right| =2.$
+    \end{enumerate}
+    
+    \item   (5 points total including all the different contours)
+    \[
+    \oint_{C}\frac{e^{z}}{\left( z+1\right) ^{2}}\,dz
+    \]
+    
+      \begin{enumerate}
+        \item where $C$ is the circle $\left| z-1\right| =3.$
+        
+        \item where $C$ is the circle $\left| z-1\right| =1.$
+        
+        \item where $C$ is the circle $\left| z-2i\right| =3.$
+      \end{enumerate}
+    \end{enumerate}
+    
+    
+    \item Find the Laurent series for each of the following functions about the point and in the region(s) indicated.
+    
+    \begin{enumerate}
+      \item $f\left( z\right) =\frac{\displaystyle z}{\displaystyle z^{2}-5z+6}$; $z_{0}=2$; $0 \leq \left|z-2\right| <1$
+      
+      \item $f\left( z\right) =\frac{\displaystyle z}{\displaystyle z^{2}-5z+6}$; $z_{0}=2$; $1<\left| z-2\right| <\infty $.
+      
+      \item $f\left( z\right) =\frac{\displaystyle z^{2}}{\displaystyle z^{2}+1}$, $z_{0}=$ $1$; $0 \leq \left| z-1\right| <\sqrt{2}$.
+      
+      \item $f\left( z\right) =\frac{\displaystyle z^{2}}{\displaystyle z^{2}+1}$, $z_{0}=$ $1$;  $\left| z-1\right| >\sqrt{2}$.
+      
+      
+      \item $f\left( z\right) =\frac{\displaystyle e^{z}-1}{\displaystyle z^{2}}$, $z_{0}=0$, $0<\left|
+      z\right| <\infty $.
+    
+    
+    \end{enumerate}
+    
+    \item Find the residues of the given functions at all of their poles:
+    
+    \begin{enumerate}
+  
+      \item \[
+      f\left( z\right) =\frac{1+z}{1-\cos z}
+      \]
+      
+      \item \[
+      f\left( z\right) =\frac{z^{2}}{\left( z^{2}+3z+2\right) ^{2}}
+      \]
+      
+      \item \[
+      f\left( z\right) =\frac{\ln z}{1+z^{2}},\;-\pi <\arg \left( z\right) \leq \pi.
+      \]
+    \end{enumerate}
+    
+    \item Compute the following integrals using residues:
+    
+    \begin{enumerate}
+      \item \[
+      \oint_{C}\frac{z}{z^{2}-1}\,dz;\hspace{0.2in}C:\;\left| z\right| =4
+      \]
+      
+      \item \[
+      \oint_{C}\tan z\,\,dz;\hspace{0.2in}C:\;\left| z\right| =2
+      \]
+      
+      \item \[
+      \oint_{C}\frac{1+z}{1-\cos z}\,dz;\hspace{0.2in}C:\;\left| z\right| =8
+      \]
+      
+      \item \[
+      \oint_{C}\frac{1}{z^{2}+z+1}\,dz;\hspace{0.2in}C:\;\left| z-1\right| =\frac{3}{2}
+      \]
+    \end{enumerate}
+    
+    \item Compute the following integrals using residues:
+    
+    \begin{enumerate}
+      \item \[
+      \int_{0}^{2\pi }\frac{d\theta }{5+3\cos \theta }
+      \]
+      
+      \item \[
+      \int_{0}^{\infty }\frac{x\sin x}{1+x^{2}}\,dx
+      \]
+    \end{enumerate}
+    
+  
+    \end{enumerate}
+  % End of Exercises set on Analytic functions
 
 \end{document}
