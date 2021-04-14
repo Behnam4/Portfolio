@@ -310,11 +310,89 @@
       \begin{enumerate}
         \item $\int \! \int_{\mathcal{S}}\mathbf{F\cdot \hat{n}}\,d\mathcal{S}$ where $\mathbf{F}=x\mathbf{i}+y\mathbf{j}-z\mathbf{k}$ and $\mathcal{S}$ is the part of the plane $x+2y+z=4$ lying in the first octant.  Let $\mathbf{\hat{n}}$ point away from the origin.
         
+          \textcolor{hwColor}{
+            $
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}. \hat{n}ds
+              =\bigints \bigints\limits_{\mathcal{S}} \left(x,y,-z\right). \left[\dfrac{\nabla f}{|\nabla f|} \dfrac{|\nabla f|}{\partial f/\partial z} \right]dxdy
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left(x,y,-z\right). \left(1,2,1\right)dx dy
+              \\
+              \\
+              =\bigints\limits_{0}^{2} \bigints\limits_{0}^{4} 2\left(x+2y-2\right) dx dy
+              \\
+              \\
+              =16 \bigints\limits_{0}^{2} y dy 
+              \\
+              \\
+              \therefore ~~~~ \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}. \hat{n}ds=32
+            $
+          }
+
         \item $\int \! \int_{\mathcal{S}}\mathbf{F\cdot \hat{n}}\,d\mathcal{S}$ where $\mathbf{F}=xz\mathbf{i}-y\mathbf{k}$ and
         $\mathcal{S}$ is the part of the sphere $x^{2}+y^{2}+z^{2}=4$ lying
         above the plane $z=1$ ($\mathbf{\hat{n}}$ points radially outward).
-        
+
+          \textcolor{hwColor}{
+            $
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}. \hat{n}ds=\bigints \bigints\limits_{\mathcal{S}} \left(xz, 0, -y\right)\hat{n} dA 
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left[r^2 sin(\theta) cos(\theta) cos(\phi), 0, -r sin(\theta) sin(\phi)\right] \\
+              .\left[cos(\phi) sin(\theta), sin(\theta) sin(\phi), cos(\theta)\right] sin(\theta) r^2 d\theta d\phi
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left[r^2 sin^2(\theta) cos(\theta) cos^2(\phi)-r sin(\theta) cos(\theta) sin(\phi)\right] sin(\theta) r^2 d\theta d\phi 
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left[r^4 sin^3(\theta) cos(\theta) cos^2(\phi)-r^3 sin^2(\theta) cos(\theta) sin(\phi)\right]d\theta d\phi 
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} r^4 sin^3(\theta) cos(\theta) cos^2(\phi)d\theta d\phi-\bigints \bigints\limits_{\mathcal{S}} r^3 sin^2(\theta) cos(\theta) sin(\phi)  d\theta d\phi 
+              \\
+              \\
+              =r^4 \bigints\limits_{0}^{2 \pi} cos^2(\phi) d\phi \left[\dfrac{1}{4} sin^4(\theta)\right] \Big|_{0}^{\pi/3}
+              -r^3 \bigints\limits_{0}^{2 \pi} sin(\phi) d\phi \left[\dfrac{sin^3(\theta)}{3}\right] \Big|_{0}^{\pi/3}
+              \\
+              \\
+              =r^4 \bigints\limits_{0}^{2 \pi} cos^2(\phi) d\phi \dfrac{1}{4} \left(\dfrac{\sqrt{3}}{2}\right)^4
+              -r^3 \bigints\limits_{0}^{2 \pi} sin(\phi) d\phi \dfrac{1}{3} \left(\dfrac{\sqrt{3}}{2}\right)^3
+              \\
+              \\
+              =r^4 \left[\pi\right] \dfrac{1}{4} \left(\dfrac{\sqrt{3}}{2}\right)^4
+              -r^3 \left[0\right] \dfrac{1}{3} \left(\dfrac{\sqrt{3}}{2}\right)^3
+              \\
+              \\
+              =2^4 \pi \dfrac{1}{4} \left(\dfrac{\sqrt{3}}{2}\right)^4
+              \\
+              \\
+              \therefore ~~~~ \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}. \hat{n}ds=\dfrac{9 \pi}{4}
+            $
+          }
+          
         \item $\int \! \int_{\mathcal{S}}\mathbf{F\cdot \hat{n}\,}d\mathcal{S}$ where $\mathbf{F}=x\mathbf{i}+y\mathbf{j}-z\mathbf{k}$ and $\mathcal{S}$ is the cylindrical segment $x^{2}+y^{2}=2,\;0\leq z\leq 4$ ($\mathbf{\hat{n}}$ points radially outward).
+        
+          \textcolor{hwColor}{
+            $
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}. \hat{n}ds=\bigints \bigints\limits_{\mathcal{S}} \left(x,y,-z\right).\left(\dfrac{\nabla}{|\nabla|}\right)dA
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left(x,y,-z\right).\left[cos(\phi), sin(\phi), 0\right] r dz d\phi
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left[r cos(\phi)+r sin(\phi)\right] r dz d\phi
+              \\
+              \\
+              =\bigints \bigints\limits_{\mathcal{S}} \left[r^2 cos(\phi)+r^2 sin(\phi)\right] dz d\phi
+              \\
+              \\
+              =(\sqrt{2})^2 \bigints\limits_{0}^{4} dz \bigints\limits_{0}^{2 \pi} d\phi
+              \\
+              \\
+              \therefore ~~~~ \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}. \hat{n}ds=16 \pi
+            $
+          }
+
       \end{enumerate}
     
     
