@@ -252,9 +252,56 @@
         
         \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}=\cos x\mathbf{i}-y\mathbf{j}+xz\mathbf{k}$ and $\mathcal{C}$ is the curve given parametrically as $x\left( t\right) =t$, $y\left(t\right) =-t^{2}$ and $z\left( t\right) =1$, $0\leq t\leq 1$.
         
+          \textcolor{hwColor}{
+            $
+              \bigints\limits_{\mathcal{C}} \mathbf{F}.ds=\bigints\limits_{\mathcal{C}} \left(cos(x), -y, xz \right).\left(1,-2t,0\right) dt \\
+               \\
+              =\bigints\limits_{\mathcal{C}} \left(cos(t), t^2,t\right).\left(1,-2t,0\right) dt 
+              \\
+              \\
+              =\bigints\limits_{0}^{1} \left(cos(t)-2t^3\right) dt
+              \\
+              \\
+              \\
+              \therefore ~~~~ \bigints\limits_{\mathcal{C}} \mathbf{F}.ds=sin(1)-\dfrac{1}{2}
+            $
+          }
+
         \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}=-3xy \mathbf{i}+2\mathbf{j}$ and $\mathcal{C}$ is the semicircle $x^{2}+z^{2}=4,\;y=1,\,z\geq 0,$oriented from $\left( 2,\,1,\,0\right) $ to $\left( -2,\,1,\,0\right) .$
         
+          \textcolor{hwColor}{
+            $
+              \bigints\limits_{\mathcal{C}} \mathbf{F}.ds=\bigints\limits_{\mathcal{C}}  \left(-3x, 2, 0\right).\left(-2 sin(t), 0, 2cos(t)\right) dt 
+              \\
+              \\
+              =\bigints\limits_{\mathcal{C}} \left(-6 cos(t), 2, 0\right). \left(-2 sin(t), 0, 2 cos(t)\right) dt 
+              \\
+              \\
+              =\bigints\limits_{0}^{\pi} 12 cos(t) sin(t) dt
+              \\
+              \\
+              \therefore ~~~~ \bigints\limits_{\mathcal{C}} \mathbf{F}.ds=0
+            $
+          }
+
+
         \item $\int_{\mathcal{C}}\mathbf{F\cdot }\, d\mathbf{s}$ where $\mathbf{F}= \mathbf{j}-3x\mathbf{k}$ and $\mathcal{C}$ is the curve given parametrically as $x\left( t\right) =1+t^{2}$, $y\left( t\right) =-t$ and $ z\left( t\right) =1+t$, $2\leq t\leq 5$.
+        
+          \textcolor{hwColor}{
+            $
+              \bigints\limits_{\mathcal{C}} \mathbf{F}.ds=\bigints\limits_{\mathcal{C}} \left(0, 1, -3x\right).\left(2t, -1,1\right) dt
+              \\
+              \\
+              =\bigints\limits_{\mathcal{C}} \left(0, 1, -3(-1-t^2)\right).\left(2t, -1,1\right) dt
+              \\
+              \\
+              =\bigints\limits_{2}^{5} 4+3t^2 dt 
+              \\
+              \\
+              \therefore ~~~~ \bigints\limits_{\mathcal{C}} \mathbf{F}.ds=-129
+            $
+          }
+
       \end{enumerate}
     
     
@@ -479,13 +526,7 @@
  % End of Exercises set on Fourier Transforms and the Dirac Delta
 
 
-
-
-
-
-
-
-  \textbf{Problem set on Fourier Transforms and the Dirac Delta} (40 points)
+  \textbf{Problem set on partial differential equations} (40 points)
   \begin{enumerate}
 
     \item  Consider a square drum. Its membrane has all four sides (length $a$) tightly clamped.  Some of its vibrational modes are also dampened by a clamp placed at the center of the membrane. 
@@ -524,7 +565,7 @@
       \end{enumerate}
   
   \end{enumerate}
-  % End of Problem set on Fourier Transforms and the Dirac Delta
+  % End of Problem set on partial differential equations
 
 
   \textbf{Problem set on special functions} (40 points)
