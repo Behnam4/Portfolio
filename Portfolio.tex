@@ -416,38 +416,127 @@
             $
           }
         
-        \item
-        \[
+        \item \[
         \int \! \int_{\mathcal{S}}\left( \mathbf{\nabla \times V}\right)
         \mathbf{\cdot \hat{n}\,}\,d\mathcal{S},
         \]
         where $\mathbf{V}=\left( x-x^{2}z\right) \mathbf{i}+\left(
         yz^{3}-y^{2}\right) \mathbf{j}+\left( x^{2}y-xz\right) \mathbf{k} $ and $\mathcal{S}$ is \emph{any} surface whose boundary is in the $x$-$y$ plane.
-        
-        \item
-        \[
+
+          \textcolor{hwColor}{
+            $
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}.\hat{n}ds=\bigints \bigints\limits_{\mathcal{S}} \left[x+x^2-y, 2xyz-2xy, xz^2\right]. \hat{n}ds
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} (\overrightarrow{\nabla}.\mathbf{F}) dV
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} \left[(1-2xz)+(z^3-2y)+(-x)\right] dx dy dz
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} 1-2xz+z^3-2y-x ~ dx dy dz
+              \\
+              \\
+              =\bigints \bigints x-x^2z+xz^3-2xy-\dfrac{x^2}{2} ~ dy dz
+              \\
+              \\
+              =\bigints xy-x^2yz+xyz^3-xy^2-\dfrac{xy^2}{2} dz
+              \\
+              \\
+              \therefore ~~~~ \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}.\hat{n}ds=xyz \left[1-\dfrac{xyz}{2}-\dfrac{z^3}{3}-y-\dfrac{x}{2}\right]
+            $
+          }
+
+        \item \[
         \oint \mathbf{V\cdot }d\mathbf{s}
         \]
         around the circle $\left( x-2\right) ^{2}+\left( y-3\right) ^{2}=9,$ $z=0$, where $\mathbf{V}=\left( x^{2}+yz^{2}\right) \mathbf{i}+\left(2x-y^{3}\right) \mathbf{j}$.
         
-        \item
-        \[
+          \textcolor{hwColor}{
+            $
+              \oint V.dr=\bigints \bigints\limits_{S} \left(\overrightarrow{\nabla}.\mathbf{F}\right) \hat{n} dS
+              \\
+            $
+            Since $z=0$ bounded by the circle until normal vector is k. Therefore, $\overrightarrow{\nabla}.\mathbf{F}$ 
+            when $z$ is zero is $2 \hat{k} dx dy$. \\
+            \\
+            $
+              \oint V.dr=2 \pi r^2=2 \pi (3)^2 
+              \\
+              \\
+              \therefore ~~~~ \oint V.dr=18 \pi
+            $
+          }
+
+        \item \[
         \int \! \int_{\mathcal{S}}\mathbf{V\cdot \hat{n}}\,\,d\mathcal{S},
         \]
         over the entire surface of the volume in the first octant bounded by $
         x^{2}+y^{2}+z^{2}=16$ and the coordinate planes, where $\mathbf{V}=\left(x+x^{2}-y^{2}\right) \mathbf{i}+\left( 2xyz-2xy\right) \mathbf{j}-xz^{2}\mathbf{k}$.
         
-        \item
-        \[
+          \textcolor{hwColor}{
+            $
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}.\hat{n}ds=\bigints \bigints\limits_{\mathcal{S}} \left[x+x^2-y, 2xyz-2xy, xz^2\right]. \hat{n}ds
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} (\overrightarrow{\nabla}.\mathbf{F}) dV
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} \left[1+2x+(2xz-2x)+(-2xz)\right] dV
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} dV
+              \\
+              \\
+              =\bigints\limits_{0}^{\pi/2} \bigints\limits_{0}^{\pi/2} \bigints\limits_{0}^{4} \rho^2 sin(\phi) d\rho d\theta d\phi 
+              \\
+              \\
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}.\hat{n}ds=\dfrac{32 \pi}{3}
+            $ 
+          }
+
+        \item \[
         \int \! \int_{\mathcal{S}}\mathbf{V\cdot \hat{n}}\,\,d\mathcal{S},
         \]
         over the surface of a sphere of radius 2 and center at the origin, where $\mathbf{V}=2x\mathbf{i}-2y\mathbf{j}+5\mathbf{k}$.
         
-        \item
-        \[ \oint \left( y\mathbf{i}-x\mathbf{j}+z \mathbf{k}\right) \cdot d\mathbf{s}
+          \textcolor{hwColor}{
+            $
+              \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}.\hat{n}ds=\bigints \bigints\limits_{\mathcal{S}} \left[2x, -2y, 5\right]. \hat{n}ds
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} (\overrightarrow{\nabla}.\mathbf{F}) dV
+              \\
+              \\
+              =\bigints \bigints \bigints\limits_{v} \left(2-2+0\right) dV 
+              \\
+              \\
+              \therefore ~~~~ \bigints \bigints\limits_{\mathcal{S}} \mathbf{F}.\hat{n}ds=0
+            $
+          }
+
+        \item \[ \oint \left( y\mathbf{i}-x\mathbf{j}+z \mathbf{k}\right) \cdot d\mathbf{s}
         \]
         around the circumference of the circle with radius $2$, center at the
         origin, in the $xy$ plane.
+
+          \textcolor{hwColor}{
+            $
+              \oint \left(y, -x, z\right) dS
+              \\
+              =\bigints \bigints\limits_{A} (\overrightarrow{\nabla}.\mathbf{F}) dV
+              \\
+              \\
+              =\bigints \bigints\limits_{A} -1-1 dx dy 
+              \\
+              \\
+              =\bigints\limits_{0}^{2} \bigints\limits_{0}^{2 \pi} -1-1 dx dy
+              \\
+              \\
+              \therefore ~~~~ \oint \left(y, -x, z\right) dS=-8 \pi 
+            $
+          }
+
       \end{enumerate}
     
   \end{enumerate}
