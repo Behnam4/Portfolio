@@ -886,7 +886,7 @@
 
   \textbf{Exercises set on special functions} (5 points)
   \begin{enumerate}
-    \item using the method discussed in class 16, show that the equations below can be solved in terms of Bessel functions, and find their general solution.
+    \item Using the method discussed in class 16, show that the equations below can be solved in terms of Bessel functions, and find their general solution.
     
     \begin{enumerate}
     \item $y^{\prime \prime }+2n^{2}xy=0$
@@ -898,15 +898,68 @@
     
     \item Consider the generating function of Bessel functions, $G(x,h)$. Show that $G\left( x+y,\,h\right) =G\left( x,\,h\right) G\left(
     y,\,h\right) .$
+
+      \textcolor{hwColor}{
+        From page 612 of the textbook we learned that, the Bessel fuctions $\mathcal{J}_v(x)$, where $v=n$ is an integer,
+        can be described by a generating function in a way similar to that discussed for Legendre polynomials. The genrerating 
+        function for Bessel functions of integer order is given by 
+        $$\mathcal{G}(x,h)=exp \left[\dfrac{x}{2}(h-\dfrac{1}{h})\right]=\sum\limits_{n=-\infty}^{\infty}\mathcal{J}_n(x) h^n$$ 
+        Hence we have the following: 
+        \\
+        \\
+        $
+          \mathcal{G}(x+y, h)= exp\left[\dfrac{x+y}{2} \left(h-\dfrac{1}{h}\right)\right]
+          \\
+          \\
+          =exp \left[\dfrac{x}{2} \left(h-\dfrac{1}{h}\right)+\dfrac{y}{2} \left(h-\dfrac{1}{h}\right)\right]
+          \\
+          \\
+          =exp \left[\dfrac{x}{2} \left(h-\dfrac{1}{h}\right)\right]+exp \left[\dfrac{y}{2} \left(h-\dfrac{1}{h}\right)\right]
+          \\
+          \\
+          \therefore ~~~ \mathcal{G}(x+y, h)=\mathcal{G}(x,h) \mathcal{G}(y,h)
+        $
+      }
     
     \item Use the result in the previous exercise to show that $J_{m}\left( x+y\right) =\sum\limits_{k=-\infty}^{\infty }J_{k}\left( x\right) J_{m-k}\left( y\right) .$
     
     
     \item Express each of the following in terms of Legendre polynomials, $
     P_{n}\left( x\right) $:
+
+      \textcolor{hwColor}{
+        We have $$P_n(x)=\dfrac{1}{2^n n!} \dfrac{d^n}{dx^n} (x^2-1)^n$$
+        With the help of the above formula we have: \\
+        \\
+        $
+          \begin{cases}
+            P_0(x)=1
+            \\
+            P_1(x)=x
+            \\
+            P_2(x)=\dfrac{1}{2} (3x^2-1)
+            \\
+            P_3(x)=\dfrac{1}{2} (5x^3-3x)
+            \\
+            P_4(x)=\dfrac{1}{8} (35x^4-30x^2+3)
+          \end{cases} \Longrightarrow \begin{cases}
+            x=P_1 \\
+            x^3=\dfrac{2}{5} P_3+\dfrac{3}{5}x=\dfrac{2}{5} P_3+\dfrac{3}{5}P_1
+          \end{cases}
+        $
+      }
       
       \begin{enumerate}
         \item $x-x^{3}$
+        
+        \textcolor{hwColor}{
+          $
+            f(x)=x-x^3=P_1-\dfrac{2}{5} P_3+\dfrac{3}{5}P_1
+            \\
+            \\
+            \therefore ~~~~ f(x)=\dfrac{2}{5} P_1-\dfrac{2}{5}P_3
+          $ 
+        }
         
         \item $7x^{4}-3x+1$
       \end{enumerate}
