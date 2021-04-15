@@ -542,6 +542,8 @@
   \end{enumerate}
   % End of Exercises set on line, surface and volume integrals
 
+  \pagebreak
+
   \textbf{Problem set on Fourier Transforms and the Dirac Delta} (40 points)
   \begin{enumerate}
 
@@ -578,10 +580,12 @@
   \end{enumerate}
   % End of Problem set on Fourier Transforms and the Dirac Delta
 
+  \pagebreak
+
   \textbf{Exercises set on Fourier Transforms and the Dirac Delta} (5 points)
   \begin{enumerate}
 
-    \item evaluate the following integrals: 
+    \item Evaluate the following integrals: 
     \[
     \begin{array}{lll}
     1.\ \int_{-2}^{0}\left( x^{2}-1\right) \,\delta \left( x^{2}-1\right)
@@ -592,12 +596,85 @@
     x-1\right) \,dx
     \end{array}
     \]
-    
     \[
     \hspace{3em} 5.\ \int \! \int_{\mathcal{S}}\left( x^{2}+y^{2}\right)
     \delta \left( x-2\right) \,\delta \left( y-2\right) dx\,dy,
     \]
-    where $\mathcal{S}$ is the entire $xy$ plane. 
+    where $\mathcal{S}$ is the entire $xy$ plane.
+
+      \textcolor{hwColor}{
+        From page 440 of the text book we have:
+        $$\bigints f(t) \delta(h(t)) dt$$
+        and making a change of variables to $z=h(t)$, we may show that 
+        $$\delta(h(t))=\sum\limits_{i} \dfrac{\delta(t-t_i)}{|h^{'}(t_i)|}$$
+        where the $t_i$ are those values of $t$ for which $h(t)=0$ and $h^{'}(t)$ stands for $\dfrac{dh}{dt}$.
+        With the help of this formula we have: \\ \\
+      }
+    
+      \textcolor{hwColor}{
+        $
+          1. \bigints\limits_{-2}^{0} (x^2-1) \delta(x^2-1) dx
+          \\
+          \\
+          =\bigints\limits_{-2}^{0} (x^2-1) \dfrac{\delta(x-1)}{2}dx 
+          \\
+          \\
+          \therefore ~~~~ \bigints\limits_{-2}^{0} (x^2-1) \delta(x^2-1) dx=0
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          2. \bigints\limits_{0}^{2} (x^2+1) \delta(x^2-1) dx
+          \\
+          \\
+          =\left(\dfrac{x^2+1}{2}\right) \Big|_{x=1}  \bigints\limits_{0}^{2} \delta(x-1)
+          \\
+          \\
+          \therefore ~~~~ \bigints\limits_{0}^{2} (x^2+1) \delta(x^2-1) dx=1
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          3. \bigints\limits_{-\infty}^{+\infty} ln(x) \delta(e^x-e^2) dx
+          \\
+          \\
+          =\bigints\limits_{-\infty}^{+\infty} ln(x) \dfrac{\delta(x-e^2)}{e^x \Big|_{x=e^2}}dx
+          \\
+          \\
+          \therefore ~~~~ \bigints\limits_{-\infty}^{+\infty} ln(x) \delta(e^x-e^2) dx=2 e^{-2e}
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          4. \bigints\limits_{-\infty}^{+\infty} e^x \delta(sinh(x)-1) dx
+          \\
+          \\
+          =\bigints\limits_{-\infty}^{+\infty} \dfrac{e^x \delta(x-1)}{cosh(x) \Big|_{x=1}} 
+          \\
+          \\
+          \therefore ~~~~ \bigints\limits_{-\infty}^{+\infty} e^x \delta(sinh(x)-1) dx=\dfrac{2e^2}{e^2+1}
+          \\
+          \\
+          \rule{15cm}{1pt}
+          \\
+          \\
+          5. \bigints \bigints\limits_{S} (x^2+y^2) \delta(x-2) \delta(y-2) dx dy
+          \\
+          \\
+        $
+        Based on the top formula we should find a value for $x$ and $y$ where the condition for the formula holds, hence:
+        \\
+        \\
+        $
+          =\left(x^2+y^2\right) \Big|_{x=2} \Big|_{y=2}  \bigints \bigints\limits_{S} \delta(x-2) \delta(y-2) dx dy
+          \\
+          \\
+          \therefore ~~~~ \bigints \bigints\limits_{S} (x^2+y^2) \delta(x-2) \delta(y-2) dx dy=8
+        $
+      }
     
     \[
     6.\ \int \! \int_{\mathcal{S}}\exp \left( i\mathbf{k\cdot r}\right) \,\delta
@@ -690,8 +767,9 @@
      
     
   \end{enumerate}
- % End of Exercises set on Fourier Transforms and the Dirac Delta
+  % End of Exercises set on Fourier Transforms and the Dirac Delta
 
+  \pagebreak
 
   \textbf{Problem set on partial differential equations} (40 points)
   \begin{enumerate}
@@ -734,6 +812,7 @@
   \end{enumerate}
   % End of Problem set on partial differential equations
 
+  \pagebreak
 
   \textbf{Problem set on special functions} (40 points)
   \begin{enumerate}
@@ -803,6 +882,7 @@
   \end{enumerate}
   % End of Problem set on special functions
 
+  \pagebreak
 
   \textbf{Exercises set on special functions} (5 points)
   \begin{enumerate}
@@ -857,6 +937,7 @@
   \end{enumerate}
   % End of Exercises set on special functions
 
+  \pagebreak
 
   \textbf{Exercises set on Analytic functions} (5 points)
   \begin{enumerate}
