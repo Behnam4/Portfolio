@@ -943,8 +943,17 @@
             \\
             P_4(x)=\dfrac{1}{8} (35x^4-30x^2+3)
           \end{cases} \Longrightarrow \begin{cases}
-            x=P_1 \\
+            x=P_1
+            \\
+            x^2=\dfrac{2P_2+1}{3}
+            \\
             x^3=\dfrac{2}{5} P_3+\dfrac{3}{5}x=\dfrac{2}{5} P_3+\dfrac{3}{5}P_1
+            \\
+            x^4=\dfrac{8P_4+30x^2-3}{35} 
+            \\
+            =\dfrac{8P_4+30\left(\dfrac{2P_2+1}{3}\right)-3}{35}
+            \\
+            =\dfrac{8P_4+20P_2+7}{35} 
           \end{cases}
         $
       }
@@ -952,16 +961,26 @@
       \begin{enumerate}
         \item $x-x^{3}$
         
-        \textcolor{hwColor}{
-          $
-            f(x)=x-x^3=P_1-\dfrac{2}{5} P_3+\dfrac{3}{5}P_1
-            \\
-            \\
-            \therefore ~~~~ f(x)=\dfrac{2}{5} P_1-\dfrac{2}{5}P_3
-          $ 
-        }
+          \textcolor{hwColor}{
+            $
+              f(x)=x-x^3=P_1-\dfrac{2}{5} P_3+\dfrac{3}{5}P_1
+              \\
+              \\
+              \therefore ~~~~ f(x)=\dfrac{2}{5} P_1-\dfrac{2}{5}P_3
+            $ 
+          }
         
         \item $7x^{4}-3x+1$
+        
+          \textcolor{hwColor}{
+            $
+              f(x)=7x^{4}-3x+1=7\left(\dfrac{8P_4+20P_2+7}{35}\right)-3P_1+1
+              \\
+              \\
+              \therefore ~~~~ f(x)=\dfrac{12}{5}P_0-3P_1+4P_2+\dfrac{8}{5}P_4
+            $
+          }
+
       \end{enumerate}
     
     \item Use the generating function for Legendre polynomials to obtain $P_{3}\left(x\right)$.
