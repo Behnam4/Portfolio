@@ -924,8 +924,7 @@
     \item Use the result in the previous exercise to show that $J_{m}\left( x+y\right) =\sum\limits_{k=-\infty}^{\infty }J_{k}\left( x\right) J_{m-k}\left( y\right) .$
     
     
-    \item Express each of the following in terms of Legendre polynomials, $
-    P_{n}\left( x\right) $:
+    \item Express each of the following in terms of Legendre polynomials, $P_{n}\left( x\right) $:
 
       \textcolor{hwColor}{
         We have $$P_n(x)=\dfrac{1}{2^n n!} \dfrac{d^n}{dx^n} (x^2-1)^n$$
@@ -985,11 +984,94 @@
     
     \item Use the generating function for Legendre polynomials to obtain $P_{3}\left(x\right)$.
     
+      \textcolor{hwColor}{
+        From page 584 of the textbook, For Legendre polynomials we have the functions $P_n(x)$ defined as
+        $$\mathcal{G}(x, h)=(1-2xh+h^2)^{-1/2}=\sum\limits_{n=0}^{\infty} P_n(x)h^n$$
+        What we have is the generating function for Legendre polynomials. \\
+        Generating function is defined as
+        $$P_n(x)=\dfrac{1}{2^n n!} \dfrac{d^n}{dx^n} (x^2-1)^n$$
+        For $P_3(x)$ we need to set $n=3$, hence: \\
+        \\
+        $
+          P_3(x)=\dfrac{1}{2^3 3!} \dfrac{d^3}{dx^3} (x^2-1)^3 \\
+          \\
+          \begin{cases}
+            \dfrac{d}{dx} \left[(x^2-1)^3\right]=3(2x) (x^2-1)^2=6x(x^2-1)^2=6(x^5-2x^3+x)
+            \\
+            \dfrac{d^2}{dx^2} \left[(x^2-1)^3\right]=\dfrac{d}{dx} \left[6(x^5-2x^3+x)\right]=6(5x^4-6x^2+1)
+            \\
+            \dfrac{d^3}{dx^3} \left[(x^2-1)^3\right]=\dfrac{d}{dx} \left[6(5x^4-6x^2+1)\right]=6(20x^3-12x)
+          \end{cases}
+          \\
+          \\
+          \longrightarrow P_3(x)=P_3(x)=\dfrac{1}{2^3 3!} \dfrac{d^3}{dx^3} (x^2-1)^3
+          =\dfrac{1}{8 \times 6} 6(20x^3-12x)
+          \\
+          \\
+          \therefore ~~~~ P_3(x)=\dfrac{1}{2} (5x^3-3x)
+        $
+      }
+    
     \item Use the Rodrigues formula for Legendre polynomials to obtain $P_{4}\left(x\right)$.
+    
+      \textcolor{hwColor}{
+        The Rodrigues formula for Legendre polynomials is
+        $$P_n(x)=\dfrac{1}{2^n n!} \dfrac{d^n}{dx^n} \left[(x^2-1)^n\right]$$
+        For $n=4$ we have
+        $
+          P_4(x)=\dfrac{1}{2^4 4!} \dfrac{d^4}{dx^4} \left[(x^2-1)^4\right] 
+          \\
+          \\
+          (x^2-1)^4=x^8-4x^6+6x^4-4x^2+1 
+          \\
+          \\
+          \begin{cases}
+            \dfrac{d}{dx} \left[x^8-4x^6+6x^4-4x^2+1\right]=8x^7-24x^5+24x^3-8x
+            \\
+            \\
+            \dfrac{d^2}{dx^2} \left[x^8-4x^6+6x^4-4x^2+1\right] \\
+            =\dfrac{d}{dx}\left[8x^7-24x^5+24x^3-8x\right]=56x^6-120x^4+72x^2-8
+            \\
+            \\
+            \dfrac{d^3}{dx^3} \left[x^8-4x^6+6x^4-4x^2+1\right] \\
+            =\dfrac{d}{dx} \left[56x^6-120x^4+72x^2-8\right]=336x^5-480x^3+144x
+            \\
+            \\
+            \dfrac{d^4}{dx^4} \left[x^8-4x^6+6x^4-4x^2+1\right] \\
+            =\dfrac{d}{dx} \left[336x^5-480x^3+144x\right]=1680x^4-1440x^2+144
+          \end{cases}
+          \\
+          \\
+          \Longrightarrow P_4(x)=\dfrac{1}{2^4 4!} \dfrac{d^4}{dx^4} \left[(x^2-1)^4\right]
+          =\dfrac{1}{16 \times 24} \left(1680x^4-1440x^2+144\right)
+          \\
+          \\
+          \therefore ~~~~  P_4(x)=\dfrac{35}{8}x^4-\dfrac{15}{4}x^2+\dfrac{3}{8}
+        $
+      }
     
     
     \item Write the delta function, $\delta \left( x\right)$, as a series in Legendre polynomials over the range \newline $-1\leq x\leq 1$.
     
+      \textcolor{hwColor}{
+        $\delta(x)=\sum\limits_{n=0}^{\infty} P_n$ where $P_n$ is the Legendre polynomials. \\
+        \\
+        $
+          \delta(x)=\sum\limits_{n=0}^{\infty} P_n \Longrightarrow  \delta(x) P_m=\sum\limits_{n=0}^{\infty} P_m P_n
+          \\
+          \\
+          \bigints\limits_{-1}^{1} P_m=P_m(0) 
+          \\
+          \\
+          \bigints\limits_{-1}^{1} P_n P_m=\left(\dfrac{2}{2n+1}\right) 
+          \\
+          \\
+          P_m(0)=a_m \left(\dfrac{2}{2m+1}\right), ~~~ where ~~~ m=n 
+          \\
+          \\
+          \therefore ~~~~ a_m=P_m(0) \left(\dfrac{2m+1}{2}\right)
+        $
+      }
     
     \item Write each of the following expressions as spherical harmonics (do not forget the normalization factors and powers of $r$) where $x$, $y$, and $z$ are the Cartesian coordinate variables:
     
