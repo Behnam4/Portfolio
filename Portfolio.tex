@@ -211,6 +211,119 @@
       \begin{enumerate}
         \item Compute  ${\mathcal I}$ directly, without using boundary theorems. 
         
+          \textcolor{hwColor}{
+            For this problem we have the following graph: \\
+            \includegraphics[height=6cm, width=8cm]{graph.JPG}
+            \\
+            \\
+            As you can see from the graph we have three paths. OA, AB, and BO. Hence, we must have three separate 
+            line integrals to calculate $\mathcal{I}$.
+            \\
+            \\
+            \textbf{Path OA}
+            \\
+            $
+              \mathcal{I}_{OA}=\bigints\limits_{OA} \left(\dfrac{3x}{x^2+y^2+1} dx-\dfrac{3y}{x^2+y^2+1}dy\right)
+              \\
+              \\
+              =\bigints\limits_{OA} \left(\dfrac{3x}{x^2+0+1} dx-0\right)
+              \\
+              \\
+              =\bigints\limits_{0}^{1} \dfrac{3x}{x^2+1} dx, ~~~~ u=x^2+1 
+              \\
+              \\
+              =3\bigints\limits_{1}^{2} \dfrac{1}{u} du
+              \\
+              \\
+              \therefore \mathcal{I}_{OA}=3 \dfrac{ln(2)}{2}
+            $
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \textbf{Path AB}
+            \\
+            We have part of the unit circle. Hence, we have the following:
+            \\
+            $
+              \mathcal{I}_{AB}=\bigints\limits_{AB} \left(\dfrac{3x}{x^2+y^2+1} dx-\dfrac{3y}{x^2+y^2+1}dy\right) \\
+              \\
+              \begin{cases}
+                x=cos(\theta) \Longrightarrow dx=-sin(\theta) d\theta
+                \\
+                y=sin(\theta) \Longrightarrow dy=cos(\theta) d\theta
+                \\
+                x^2+y^2=1
+              \end{cases}
+              \\
+              \Longrightarrow \mathcal{I}_{AB}=\bigints\limits_{AB} \left(\dfrac{3x}{x^2+y^2+1} dx-\dfrac{3y}{x^2+y^2+1}dy\right)
+              \\
+              \\
+              =\bigints\limits_{AB} \left(\dfrac{3cos(\theta)}{cos^2(\theta)+sin^2(\theta)+1} \left(-sin(\theta) d\theta\right)-\dfrac{3sin(\theta)}{cos^2(\theta)+sin^2(\theta)+1}\left(cos(\theta) d\theta\right)\right)
+              \\
+              \\
+              =\bigints\limits_{AB} \left(\dfrac{3cos(\theta)}{2} \left(-sin(\theta) d\theta\right)-\dfrac{3sin(\theta)}{2}\left(cos(\theta) d\theta\right)\right)
+              \\
+              \\
+              =-\dfrac{6}{2}\bigints\limits_{0}^{\pi/2} cos(\theta) sin(\theta) d\theta, ~~~ u=sin(\theta), du=cos(\theta) d\theta
+              \\
+              \\
+              =-3 \bigints\limits_{0}^{\pi/2} cos(\theta) u \dfrac{du}{cos(\theta)}
+              \\
+              \\
+              =-3 \bigints\limits_{0}^{1} u du
+              \\
+              \\
+              =-3 \dfrac{u^2}{2} \Big|_{0}^{1} 
+              \\
+              \\
+              \therefore ~~~ \mathcal{I}_{AB}=-\dfrac{3}{2}
+            $
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            \textbf{Path BO}
+            \\
+            $
+              \mathcal{I}_{BO}=\bigints\limits_{BO} \left(\dfrac{3x}{x^2+y^2+1} dx-\dfrac{3y}{x^2+y^2+1}dy\right)
+              \\
+              \\
+              =\bigints\limits_{BO} \left(0-\dfrac{3y}{0^2+y^2+1}dy\right) 
+              \\
+              \\
+              =-\bigints\limits_{0}^{1} \dfrac{3y}{y^2+1}dy, ~~~ u=y^2+1, du=2y dy 
+              \\
+              \\
+              =-\bigints\limits_{1}^{2} \dfrac{3y}{u} \dfrac{du}{2y}
+              \\
+              \\
+              =-\dfrac{3}{2}\bigints\limits_{1}^{2} \dfrac{1}{u}du
+              \\
+              \\
+              =-\dfrac{3}{2} ln(u) \Big|_{1}^{2}
+              \\
+              \\
+              =-\dfrac{3}{2} \left(ln(2)-ln(1)\right)
+              \\
+              \\
+              \therefore ~~~ \mathcal{I}_{BO}=|-3\dfrac{ln(2)}{2}|
+            $
+            \\
+            \\
+            \rule{15cm}{1pt}
+            \\
+            \\
+            $
+              \mathcal{I}=3 \dfrac{ln(2)}{2}+\left(-\dfrac{3}{2}\right)+|-3\dfrac{ln(2)}{2}|
+              \\
+              \\
+              \therefore ~~~ \mathcal{I}=\dfrac{6 ln(2)-3}{2}=3ln(2)-\dfrac{3}{2}
+            $
+          }
+        
         \item Compute  ${\mathcal I}$ using Green's lemma (also known as Green's theorem in a plane, see sec. 11.3 of the textbook). 
       \end{enumerate}
     
