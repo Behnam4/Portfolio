@@ -1387,10 +1387,98 @@
       \item \[
       \int_{0}^{2\pi }\frac{d\theta }{5+3\cos \theta }
       \]
+
+        \textcolor{hwColor}{
+          C: Unit circle $\Longrightarrow |z|=1$ \\
+          \\
+          $
+            I=\bigints\limits_{0}^{2\pi} \dfrac{d\theta}{5+3 cos(\theta)}=\bigints\limits_{0}^{2\pi} \dfrac{d\theta}{a+b cos(\theta)} \\
+            \\
+            \begin{cases}
+              z=e^{i \theta}
+              \\
+              dz=i e^{i \theta} d\theta=i zd\theta
+              \\
+              cos(\theta)=\dfrac{e^{i\theta}+e^{-i\theta}}{2}=\dfrac{1}{2}\left(z+\dfrac{1}{z}\right)
+            \end{cases}
+            \\
+            \\
+            \Longrightarrow I=\oint\limits_{C} \dfrac{1}{a+\dfrac{b}{2}(z+\dfrac{1}{z})} \dfrac{dz}{iz}
+            =\dfrac{2}{i} \oint\limits_{C} \dfrac{dz}{bz^2+2az+b}
+          $
+          \\
+          \\
+          $z=\dfrac{-a}{b} \sqrt{\dfrac{a^2}{b^2}-1}$ are the roots of this polynomial.These are going to be our 
+          poles. Now we need to figure out if they are both inside the contour or not. Maybe only one of them is or maybe none of them are.
+          That's because the residue;s theorem states that we only need to count the poles that are inside or on the contour.
+          \\
+          This contour is going to enclose any value of $z$ that has a modulus less than or equal to one. 
+          Since $a>b$ then $
+            \dfrac{a}{b}>1 \Longrightarrow \begin{cases}
+              z_- ~ is ~ out  \\
+              \\
+              z_+ ~ is ~ inside (first order)
+            \end{cases}
+            \\
+            \\
+            I=\dfrac{2}{i} \oint\limits_{C} \dfrac{dz}{b(z-z_-)(z-z_+)}
+            \\
+            \\
+            Res(z_+)=\lim\limits_{z \to z_+} \left[(z-z_+) \times \dfrac{1}{b(z-z_+)(z-z_-)}\right]
+            =\dfrac{1}{b(z-z_-)}
+            =\dfrac{1}{2b \sqrt{\dfrac{a^2}{b^2}-1}}
+            \\
+            \\
+            I=\dfrac{2}{i} \oint\limits_{C} \dfrac{dz}{b(z-z_-)(z-z_+)}=\dfrac{2}{i} \times 2 \pi i \times \dfrac{1}{2b \sqrt{\dfrac{a^2}{b^2}-1}}
+            \\
+            =\dfrac{2\pi}{\sqrt{a^2-b^2}}
+            \\
+            \\
+            \therefore ~~~ I=\dfrac{2\pi}{\sqrt{5^2-3^2}}=\dfrac{\pi}{2}
+          $
+        }
       
       \item \[
       \int_{0}^{\infty }\frac{x\sin x}{1+x^{2}}\,dx
       \]
+
+      \textcolor{hwColor}{
+        $
+          I=\bigints\limits_{0}^{\infty} \dfrac{x sin(x)}{1+x^2} dx 
+          \\
+        $
+        Let $f(z)=\dfrac{z e^{iz}}{z^2+1}=\dfrac{z e^{iz}}{z^2-i^2}=\dfrac{ze^{iz}}{(z+i)(z-i)}$
+        By equating the denominator to zero we have the poles as $z=i$ and $z=-i$. Now we need to find a contour that 
+        captures our interval. I am choosing the point $R$ on the real axis but later we want that $R$ to be a really reallt big number.
+        \\
+        \includegraphics[height=6cm, width=12cm]{poles.JPG}
+        \\
+        \\
+        $
+          I=\bigints\limits_{0}^{\infty} \dfrac{x sin(x)}{1+x^2} dx=\bigints\limits_{0}^{\infty} \dfrac{x \dfrac{e^{ix}-e^{-ix}}{2i}}{1+x^2} dx
+          \\
+          \\
+          =\dfrac{1}{2i} \left[\bigints\limits_{0}^{\infty} \dfrac{x e^{ix}}{x^2+1}dx-\bigints\limits_{0}^{\infty} \dfrac{xe^{-ix}}{x^2+1} dx\right]
+          \\
+          \\
+          \therefore ~~~ =\dfrac{1}{2i} \bigints\limits_{-\infty}^{+\infty} \dfrac{ze^{iz}}{z^2+1} dz
+        $
+        \\
+        Let's consider the above integral as 
+        $$
+          I=\dfrac{1}{2i} \oint \dfrac{ze^{iz}}{z^2+1} dz
+        $$ 
+        We have two poles (first order) but only $z=i$ lies inside the contour. With the help of residue at $z=i$ we have:
+        \\
+        \\
+        $
+          I=\dfrac{1}{2i} (2 \pi i) \dfrac{1}{2e}
+          \\
+          \\
+          \therefore ~~~~ I=\dfrac{1}{2} \pi e^{-1}
+        $
+      }
+
     \end{enumerate}
     
   
